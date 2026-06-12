@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高考志愿知识图谱 - 基于十五五计划</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #0a0e17; color: #c8d0e0; overflow: hidden; height: 100vh; }
+
+/* Layout */
+.app { display: flex; flex-direction: column; height: 100vh; }
+
+/* Top bar */
+.top-bar { display: flex; align-items: center; gap: 12px; padding: 10px 20px; background: #111622; border-bottom: 1px solid #1e2538; flex-shrink: 0; flex-wrap: wrap; }
+.top-bar h1 { font-size: 16px; font-weight: 700; color: #e8edf5; white-space: nowrap; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.search-group { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.search-group label { font-size: 12px; color: #8892a8; }
+.search-group select, .search-group input { background: #1a2035; border: 1px solid #2a3045; color: #c8d0e0; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+.search-group select:focus, .search-group input:focus { outline: none; border-color: #60a5fa; }
+.search-group .btn { background: #2563eb; color: #fff; border: none; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.search-group .btn:hover { background: #1d4ed8; }
+.search-group .btn.reset { background: #374151; }
+.search-group .btn.reset:hover { background: #4b5563; }
+
+/* Main content */
+.main { display: flex; flex: 1; overflow: hidden; position: relative; }
+
+/* Graph area */
+.graph-area { flex: 1; position: relative; overflow: hidden; }
+.graph-area svg { width: 100%; height: 100%; }
+.graph-area .loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #6b7280; font-size: 14px; }
+
+/* Detail panel */
+.detail-panel { width: 340px; min-width: 340px; background: #111622; border-left: 1px solid #1e2538; display: flex; flex-direction: column; transition: width 0.3s, min-width 0.3s; overflow: hidden; position: relative; }
+.detail-panel.collapsed { width: 0 !important; min-width: 0 !important; border-left: none; }
+.toggle-panel-btn { position: absolute; left: -20px; top: 50%; transform: translateY(-50%); width: 20px; height: 48px; background: #111622; border: 1px solid #1e2538; border-left: none; border-radius: 0 4px 4px 0; color: #8892a8; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 10px; z-index: 10; }
+.toggle-panel-btn:hover { color: #e8edf5; background: #1a2035; }
+.panel-header { padding: 16px 20px 12px; border-bottom: 1px solid #1e2538; flex-shrink: 0; }
+.panel-header h2 { font-size: 16px; font-weight: 700; color: #e8edf5; }
+.panel-header .subtitle { font-size: 11px; color: #6b7280; margin-top: 2px; }
+.panel-body { padding: 16px 20px; overflow-y: auto; flex: 1; font-size: 13px; line-height: 1.7; }
+.panel-body .empty { color: #6b7280; text-align: center; padding: 40px 0; font-size: 13px; }
+.panel-body .field { margin-bottom: 12px; }
+.panel-body .field-label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+.panel-body .field-value { color: #e8edf5; }
+.panel-body .tag { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; margin: 2px; }
+.tag-star { background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b44; }
+.tag-demand-high { background: #10b98122; color: #10b981; border: 1px solid #10b98144; }
+.tag-demand-low { background: #ef444422; color: #ef4444; border: 1px solid #ef444444; }
+.tag-demand-mid { background: #6b728022; color: #9ca3af; border: 1px solid #6b728044; }
+.tag-subject { background: #3b82f622; color: #60a5fa; border: 1px solid #3b82f644; }
+.tag-tier-qb { background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b44; }
+.tag-tier-hw { background: #a78bfa22; color: #a78bfa; border: 1px solid #a78bfa44; }
+.tag-tier-985 { background: #3b82f622; color: #60a5fa; border: 1px solid #3b82f644; }
+.tag-tier-211 { background: #10b98122; color: #34d399; border: 1px solid #10b98144; }
+.tag-tier-1b { background: #6b728022; color: #9ca3af; border: 1px solid #6b728044; }
+.tag-tier-2b { background: #6b728022; color: #6b7280; border: 1px solid #6b728044; }
+.key-points { list-style: none; padding: 0; }
+.key-points li { padding: 4px 0 4px 16px; position: relative; color: #9ca3af; font-size: 12px; }
+.key-points li::before { content: "▸"; position: absolute; left: 0; color: #60a5fa; }
+
+/* Legend */
+.legend { position: absolute; bottom: 16px; left: 16px; background: rgba(17,22,34,0.92); border: 1px solid #1e2538; border-radius: 6px; padding: 10px 14px; font-size: 11px; z-index: 5; }
+.legend-row { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.legend-line { width: 20px; height: 2px; flex-shrink: 0; }
+
+/* Node/link styles */
+.link { stroke: #2a3045; stroke-width: 1.5; stroke-opacity: 0.6; }
+.link-label { font-size: 9px; fill: #6b7280; }
+.node { cursor: pointer; }
+.node-circle { stroke: #fff; stroke-width: 1.5; cursor: pointer; transition: stroke-width 0.1s; }
+.node-circle:hover { stroke-width: 3; }
+.node-circle.selected { stroke: #60a5fa; stroke-width: 3; }
+.node-label { font-size: 11px; fill: #c8d0e0; pointer-events: none; text-anchor: middle; dominant-baseline: central; }
+.node-label.shadow { stroke: #0a0e17; stroke-width: 3; fill: none; }
+
+/* Zoom hint */
+.zoom-hint { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #6b7280; background: rgba(17,22,34,0.8); padding: 4px 12px; border-radius: 4px; border: 1px solid #1e2538; pointer-events: none; opacity: 0; transition: opacity 0.5s; z-index: 5; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detail-panel { width: 260px; min-width: 260px; }
+  .top-bar h1 { font-size: 13px; }
+  .search-group select, .search-group input { font-size: 11px; padding: 3px 6px; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top-bar">
+    <h1>🎯 高考志愿知识图谱</h1>
+    <div class="search-group">
+      <label>省份</label>
+      <select id="provinceFilter"><option value="">全部</option></select>
+      <label>分数</label>
+      <input id="scoreFilter" type="number" placeholder="输入高考分数" min="0" max="750" style="width:100px">
+      <label>文理科</label>
+      <select id="subjectFilter">
+        <option value="">全部</option>
+        <option value="理科">理科</option>
+        <option value="文科">文科</option>
+        <option value="文理兼收">文理兼收</option>
+        <option value="不限">不限</option>
+      </select>
+      <button class="btn" onclick="applySearch()">搜索</button>
+      <button class="btn reset" onclick="resetSearch()">重置</button>
+    </div>
+  </div>
+  <div class="main">
+    <div class="graph-area" id="graphArea">
+      <div class="loading" id="loading">加载知识图谱数据...</div>
+      <svg id="graphSvg"></svg>
+      <div class="legend">
+        <div class="legend-row"><span class="legend-dot" style="background:#f59e0b"></span> 政策文件</div>
+        <div class="legend-row"><span class="legend-dot" style="background:#a78bfa"></span> 重点行业</div>
+        <div class="legend-row"><span class="legend-dot" style="background:#60a5fa"></span> 就业岗位</div>
+        <div class="legend-row"><span class="legend-dot" style="background:#34d399"></span> 大学专业</div>
+        <div class="legend-row"><span class="legend-dot" style="background:#f472b6"></span> 开设院校</div>
+        <div class="legend-row" style="margin-top:6px;border-top:1px solid #1e2538;padding-top:4px">
+          <span class="legend-dot" style="background:#10b981"></span> 供不应求
+          <span class="legend-dot" style="background:#ef4444;margin-left:8px"></span> 供大于求
+          <span class="legend-dot" style="background:#6b7280;margin-left:8px"></span> 供需平衡
+        </div>
+      </div>
+      <div class="zoom-hint" id="zoomHint">滚轮缩放 · 拖拽平移 · 点击节点展开</div>
+    </div>
+    <div class="detail-panel" id="detailPanel">
+      <button class="toggle-panel-btn" onclick="togglePanel()">◀</button>
+      <div class="panel-header">
+        <h2 id="panelTitle">节点详情</h2>
+        <div class="subtitle" id="panelSubtitle">点击图中节点查看详情</div>
+      </div>
+      <div class="panel-body" id="panelBody">
+        <div class="empty">点击任意节点查看详细信息<br>点击政策节点展开下一层</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ====== STATE ======
+let graphData = null;
+let visible = { nodeIds: new Set(), linkIds: new Set() };
+let selectedNodeId = null;
+let expandedNodes = new Set(); // ids of nodes whose children are shown
+let svg, g, sim, linkGroup, nodeGroup, labelGroup, linkLabelGroup;
+let W, H;
+
+// ====== LOAD DATA ======
+d3.json("graph_data.json").then(data => {
+  graphData = data;
+  document.getElementById("loading").style.display = "none";
+  // Build index
+  buildIndex();
+  // Populate province filter
+  const provinces = new Set();
+  data.nodes.filter(n => n.type === "school" && n.province).forEach(n => provinces.add(n.province));
+  const sel = document.getElementById("provinceFilter");
+  [...provinces].sort().forEach(p => { const o = document.createElement("option"); o.value = p; o.textContent = p; sel.appendChild(o); });
+  // Init: show layer 1 (policies)
+  showLayer1();
+  // Show zoom hint briefly
+  const hint = document.getElementById("zoomHint");
+  hint.style.opacity = 1;
+  setTimeout(() => { hint.style.opacity = 0; }, 3000);
+});
+
+// ====== INDEX ======
+let childrenMap = {}; // parentId -> [child nodes]
+let parentMap = {};   // childId -> parent link info
+let nodeMap = {};     // id -> node
+
+function buildIndex() {
+  nodeMap = {};
+  childrenMap = {};
+  parentMap = {};
+  graphData.nodes.forEach(n => { nodeMap[n.id] = n; });
+  graphData.links.forEach(l => {
+    const sid = l.source.id || l.source;
+    const tid = l.target.id || l.target;
+    if (!childrenMap[sid]) childrenMap[sid] = [];
+    childrenMap[sid].push(tid);
+    parentMap[tid] = { parentId: sid, relation: l.relation };
+  });
+}
+
+function getChildren(id) {
+  const ids = childrenMap[id] || [];
+  return ids.map(i => nodeMap[i]).filter(Boolean);
+}
+
+function getDescendants(id) {
+  const result = [];
+  const stack = [id];
+  while (stack.length) {
+    const cur = stack.pop();
+    const kids = childrenMap[cur] || [];
+    for (const k of kids) {
+      if (!result.includes(k)) { result.push(k); stack.push(k); }
+    }
+  }
+  return result.map(i => nodeMap[i]).filter(Boolean);
+}
+
+// ====== VISIBILITY ======
+function showLayer1() {
+  visible.nodeIds.clear();
+  visible.linkIds.clear();
+  expandedNodes.clear();
+  graphData.nodes.filter(n => n.layer === 1).forEach(n => visible.nodeIds.add(n.id));
+  render();
+}
+
+function toggleExpand(nodeId) {
+  const node = nodeMap[nodeId];
+  if (!node) return;
+  selectedNodeId = nodeId;
+  showDetail(nodeId);
+
+  if (expandedNodes.has(nodeId)) {
+    // Collapse: remove this node's children (recursive) and their descendants
+    collapseNode(nodeId);
+    expandedNodes.delete(nodeId);
+    render();
+    return;
+  }
+
+  // Expand: show children of this node
+  expandedNodes.add(nodeId);
+  const children = getChildren(nodeId);
+  children.forEach(c => { visible.nodeIds.add(c.id); });
+  // Add links from this node to its children
+  graphData.links.forEach(l => {
+    const sid = l.source.id || l.source;
+    const tid = l.target.id || l.target;
+    if (sid === nodeId && visible.nodeIds.has(tid)) {
+      visible.linkIds.add(l.id || (sid + "->" + tid));
+    }
+  });
+  render();
+}
+
+function collapseNode(nodeId) {
+  const kids = childrenMap[nodeId] || [];
+  for (const k of kids) {
+    // Also recursively collapse if this child was expanded
+    if (expandedNodes.has(k)) {
+      collapseNode(k);
+      expandedNodes.delete(k);
+    }
+    visible.nodeIds.delete(k);
+  }
+  // Remove links from this node to its children
+  graphData.links.forEach(l => {
+    const sid = l.source.id || l.source;
+    const tid = l.target.id || l.target;
+    if (sid === nodeId && !visible.nodeIds.has(tid)) {
+      visible.linkIds.delete(l.id || (sid + "->" + tid));
+    }
+  });
+}
+
+// ====== RENDER ======
+function render() {
+  const container = document.getElementById("graphArea");
+  W = container.clientWidth;
+  H = container.clientHeight;
+
+  if (!svg) {
+    svg = d3.select("#graphSvg")
+      .attr("width", W)
+      .attr("height", H)
+      .attr("viewBox", [0, 0, W, H]);
+    g = svg.append("g");
+    // Zoom
+    svg.call(d3.zoom()
+      .scaleExtent([0.1, 4])
+      .on("zoom", (event) => { g.attr("transform", event.transform); })
+    );
+    // Groups
+    linkGroup = g.append("g").attr("class", "links");
+    linkLabelGroup = g.append("g").attr("class", "link-labels");
+    nodeGroup = g.append("g").attr("class", "nodes");
+    labelGroup = g.append("g").attr("class", "labels");
+  } else {
+    svg.attr("width", W).attr("height", H).attr("viewBox", [0, 0, W, H]);
+  }
+
+  const nodes = graphData.nodes.filter(n => visible.nodeIds.has(n.id));
+  const links = graphData.links.filter(l => {
+    const sid = l.source.id || l.source;
+    const tid = l.target.id || l.target;
+    return visible.linkIds.has(l.id || (sid + "->" + tid));
+  });
+
+  if (nodes.length === 0) return;
+
+  // Position new nodes
+  nodes.forEach(n => {
+    if (n.x === undefined) {
+      n.x = W / 2 + (Math.random() - 0.5) * W * 0.3;
+      n.y = H / 2 + (Math.random() - 0.5) * H * 0.3;
+    }
+  });
+
+  // Simulation
+  if (sim) sim.stop();
+  sim = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(d => {
+      const s = nodeMap[d.source.id || d.source];
+      const t = nodeMap[d.target.id || d.target];
+      return (s ? s.size * 3 : 40) + (t ? t.size * 3 : 40) + 40;
+    }))
+    .force("charge", d3.forceManyBody().strength(-300))
+    .force("center", d3.forceCenter(W / 2, H / 2))
+    .force("collide", d3.forceCollide(d => d.size * 2 + 8))
+    .alphaDecay(0.02)
+    .on("tick", ticked);
+
+  // Links
+  const link = linkGroup.selectAll("line.link")
+    .data(links, d => d.id || (d.source.id || d.source) + "->" + (d.target.id || d.target));
+  link.exit().remove();
+  const linkEnter = link.enter().append("line").attr("class", "link");
+  linkGroup.selectAll("line.link").attr("stroke", "#2a3045").attr("stroke-width", 1.5).attr("stroke-opacity", 0.6);
+
+  // Link labels
+  const ll = linkLabelGroup.selectAll("text.link-label")
+    .data(links, d => d.id || (d.source.id || d.source) + "->" + (d.target.id || d.target));
+  ll.exit().remove();
+  ll.enter().append("text").attr("class", "link-label").text(d => d.relation || "");
+
+  // Nodes
+  const node = nodeGroup.selectAll("g.node")
+    .data(nodes, d => d.id);
+  node.exit().remove();
+
+  const nodeEnter = node.enter().append("g").attr("class", "node")
+    .call(d3.drag()
+      .on("start", dragStarted)
+      .on("drag", dragged)
+      .on("end", dragEnded)
+    );
+
+  nodeEnter.append("circle").attr("class", "node-circle");
+  nodeEnter.on("click", (event, d) => {
+    event.stopPropagation();
+    toggleExpand(d.id);
+  });
+
+  // Labels
+  const label = labelGroup.selectAll("text.node-label")
+    .data(nodes, d => d.id);
+  label.exit().remove();
+  const labelEnter = label.enter().append("text").attr("class", "node-label");
+  labelGroup.selectAll("text.node-label").text(d => d.name);
+
+  // Add shadow labels for readability
+  const shadow = labelGroup.selectAll("text.node-label.shadow")
+    .data(nodes, d => d.id);
+  shadow.exit().remove();
+  shadow.enter().append("text").attr("class", "node-label shadow");
+  labelGroup.selectAll("text.node-label.shadow").text(d => d.name);
+
+  function ticked() {
+    linkGroup.selectAll("line.link")
+      .attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+
+    linkLabelGroup.selectAll("text.link-label")
+      .attr("x", d => (d.source.x + d.target.x) / 2)
+      .attr("y", d => (d.source.y + d.target.y) / 2);
+
+    nodeGroup.selectAll("g.node")
+      .attr("transform", d => `translate(${d.x},${d.y})`);
+
+    labelGroup.selectAll("text.node-label:not(.shadow)")
+      .attr("x", d => d.x).attr("y", d => d.y + d.size + 14);
+    labelGroup.selectAll("text.node-label.shadow")
+      .attr("x", d => d.x).attr("y", d => d.y + d.size + 14);
+  }
+
+  // Style nodes
+  nodeGroup.selectAll("circle.node-circle")
+    .attr("r", d => Math.max(d.size || 5, 4))
+    .attr("fill", d => getNodeColor(d))
+    .attr("stroke", d => selectedNodeId === d.id ? "#60a5fa" : "#fff")
+    .attr("stroke-width", d => selectedNodeId === d.id ? 3 : 1.5);
+
+  // Mark expanded nodes with a visual indicator
+  nodeGroup.selectAll("g.node").selectAll("circle.node-expand-indicator").remove();
+  nodeGroup.selectAll("g.node").filter(d => expandedNodes.has(d.id))
+    .append("circle")
+    .attr("class", "node-expand-indicator")
+    .attr("r", d => Math.max((d.size || 5), 4) + 4)
+    .attr("fill", "none")
+    .attr("stroke", "#60a5fa")
+    .attr("stroke-width", 2)
+    .attr("stroke-dasharray", "3,3")
+    .lower();
+}
+
+function getNodeColor(d) {
+  if (d.type === "policy") return "#f59e0b";
+  if (d.type === "industry") {
+    if (d.supply_demand_status === "供不应求") return "#10b981";
+    if (d.supply_demand_status === "供大于求") return "#ef4444";
+    return "#a78bfa";
+  }
+  if (d.type === "career") {
+    if (d.supply_demand_status === "供不应求") return "#10b981";
+    if (d.supply_demand_status === "供大于求") return "#ef4444";
+    return "#60a5fa";
+  }
+  if (d.type === "major") return "#34d399";
+  if (d.type === "school") {
+    const t = d.tier || "一本";
+    if (t === "清北") return "#f59e0b";
+    if (t === "华五") return "#a78bfa";
+    if (t === "985") return "#3b82f6";
+    if (t === "211") return "#10b981";
+    if (t === "一本") return "#6b7280";
+    return "#4b5563";
+  }
+  return "#6b7280";
+}
+
+// ====== DETAIL PANEL ======
+function showDetail(nodeId) {
+  const d = nodeMap[nodeId];
+  if (!d) return;
+  document.getElementById("panelTitle").textContent = d.name;
+  document.getElementById("panelSubtitle").textContent = getLayerLabel(d.layer) + " · " + getTypeLabel(d.type);
+
+  let html = "";
+  html += field("描述", d.desc || "暂无");
+
+  if (d.type === "policy") {
+    if (d.key_points && d.key_points.length) {
+      html += `<div class="field"><div class="field-label">要点</div><ul class="key-points">`;
+      d.key_points.forEach(k => { html += `<li>${k}</li>`; });
+      html += `</ul></div>`;
+    }
+    if (d.source) html += field("来源", d.source);
+    html += field("优先级", "★".repeat(Math.round((d.size || 10) / 4)));
+    html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开下层行业</div>`;
+  }
+
+  if (d.type === "industry") {
+    if (d.is_star) html += `<span class="tag tag-star">★ 重点产业</span> `;
+    if (d.growth_rate) html += field("增长率", d.growth_rate);
+    html += field("就业规模", "●".repeat(Math.round((d.size || 5) / 2)));
+    if (d.supply_demand_status) {
+      const cls = d.supply_demand_status === "供不应求" ? "tag-demand-high" : (d.supply_demand_status === "供大于求" ? "tag-demand-low" : "tag-demand-mid");
+      html += field("供需状况", `<span class="tag ${cls}">${d.supply_demand_status}</span>`);
+    }
+    if (d.tags && d.tags.length) {
+      html += field("适合", d.tags.map(t => `<span class="tag tag-subject">${t}</span>`).join(" "));
+    }
+    html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开下层岗位</div>`;
+  }
+
+  if (d.type === "career") {
+    if (d.salary_range) html += field("薪资范围", d.salary_range);
+    html += field("需求等级", d.demand_level || "中等");
+    if (d.demand_score) {
+      const cls = d.demand_score >= 7 ? "tag-demand-high" : (d.demand_score <= 4 ? "tag-demand-low" : "tag-demand-mid");
+      html += field("供需评分", `<span class="tag ${cls}">${d.demand_score}/10 ${d.supply_demand_status || ""}</span>`);
+    }
+    if (d.tags && d.tags.length) {
+      html += field("适合", d.tags.map(t => `<span class="tag tag-subject">${t}</span>`).join(" "));
+    }
+    html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开下层专业</div>`;
+  }
+
+  if (d.type === "major") {
+    html += field("类别", d.category || "理科");
+    html += field("学制", d.study_years || "4年");
+    if (d.热度) html += field("热度", "●".repeat(Math.min(d.热度, 10)));
+    html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开开设院校</div>`;
+  }
+
+  if (d.type === "school") {
+    const tierCls = `tag-tier-${d.tier === "清北" ? "qb" : d.tier === "华五" ? "hw" : d.tier === "985" ? "985" : d.tier === "211" ? "211" : d.tier === "一本" ? "1b" : "2b"}`;
+    html += field("层次", `<span class="tag ${tierCls}">${d.tier || "一本"}</span>`);
+    html += field("省份", d.province || "全国");
+    html += field("分数范围", `${d.score_low || 0} - ${d.score_high || 750}分`);
+    if (d.employment_direction) html += field("就业方向", d.employment_direction);
+    if (d.employment_rate) html += field("就业率", d.employment_rate);
+    html += field("科目要求", d.subject_required || "不限");
+  }
+
+  document.getElementById("panelBody").innerHTML = html;
+}
+
+function field(label, value) {
+  return `<div class="field"><div class="field-label">${label}</div><div class="field-value">${value}</div></div>`;
+}
+
+function getLayerLabel(layer) {
+  return ["", "国家政策", "重点行业", "就业岗位", "大学专业", "开设院校"][layer] || "";
+}
+
+function getTypeLabel(type) {
+  return { policy: "政策文件", industry: "重点行业", career: "就业岗位", major: "大学专业", school: "开设院校" }[type] || type;
+}
+
+// ====== SEARCH ======
+function applySearch() {
+  const province = document.getElementById("provinceFilter").value;
+  const score = parseInt(document.getElementById("scoreFilter").value) || 0;
+  const subject = document.getElementById("subjectFilter").value;
+
+  const matched = new Set();
+
+  // Find matching schools
+  graphData.nodes.filter(n => n.type === "school").forEach(n => {
+    let ok = true;
+    if (province && n.province !== province) ok = false;
+    if (score && (n.score_low > score || n.score_high < score)) ok = false;
+    if (subject && n.subject_required !== subject && n.subject_required !== "不限") {
+      ok = false;
+    }
+    if (ok) {
+      matched.add(n.id);
+      // Trace parent chain: major -> career -> industry -> policy
+      const majorId = n.major_id;
+      if (majorId) {
+        matched.add(majorId);
+        const p = parentMap[majorId];
+        if (p) { matched.add(p.parentId);
+          const gp = parentMap[p.parentId];
+          if (gp) { matched.add(gp.parentId);
+            const ggp = parentMap[gp.parentId];
+            if (ggp) matched.add(ggp.parentId);
+          }
+        }
+      }
+    }
+  });
+
+  if (matched.size === 0) {
+    // Fallback: search by name in score field
+    const q = (document.getElementById("scoreFilter").value || "").trim();
+    graphData.nodes.forEach(n => {
+      if (province && n.province !== province) return;
+      if (subject && n.subject_required && n.subject_required !== subject && n.subject_required !== "不限") return;
+      if (q && (n.name.includes(q) || (n.desc && n.desc.includes(q)))) {
+        matched.add(n.id);
+        // Also add parent chain
+        const p = parentMap[n.id];
+        if (p && !matched.has(p.parentId)) {
+          matched.add(p.parentId);
+          const gp = parentMap[p.parentId];
+          if (gp) matched.add(gp.parentId);
+        }
+      }
+    });
+  }
+
+  if (matched.size > 0) {
+    visible.nodeIds = matched;
+    // Add links between matched nodes
+    visible.linkIds.clear();
+    graphData.links.forEach(l => {
+      const sid = l.source.id || l.source;
+      const tid = l.target.id || l.target;
+      if (matched.has(sid) && matched.has(tid)) {
+        visible.linkIds.add(l.id || (sid + "->" + tid));
+      }
+    });
+    render();
+    // Select first school node
+    const firstSchool = graphData.nodes.find(n => n.type === "school" && matched.has(n.id));
+    if (firstSchool) showDetail(firstSchool.id);
+    else {
+      const first = graphData.nodes.find(n => matched.has(n.id));
+      if (first) showDetail(first.id);
+    }
+  }
+}
+
+function resetSearch() {
+  document.getElementById("provinceFilter").value = "";
+  document.getElementById("scoreFilter").value = "";
+  document.getElementById("subjectFilter").value = "";
+  showLayer1();
+  document.getElementById("panelTitle").textContent = "节点详情";
+  document.getElementById("panelSubtitle").textContent = "点击图中节点查看详情";
+  document.getElementById("panelBody").innerHTML = `<div class="empty">点击任意节点查看详细信息<br>点击政策节点展开下一层</div>`;
+}
+
+// ====== PANEL TOGGLE ======
+function togglePanel() {
+  const panel = document.getElementById("detailPanel");
+  const btn = document.querySelector(".toggle-panel-btn");
+  panel.classList.toggle("collapsed");
+  btn.textContent = panel.classList.contains("collapsed") ? "▶" : "◀";
+  setTimeout(() => {
+    W = document.getElementById("graphArea").clientWidth;
+    H = document.getElementById("graphArea").clientHeight;
+    svg.attr("width", W).attr("height", H).attr("viewBox", [0, 0, W, H]);
+    if (sim) { sim.force("center", d3.forceCenter(W / 2, H / 2)); sim.alpha(0.3).restart(); }
+  }, 350);
+}
+
+// ====== DRAG ======
+function dragStarted(event, d) {
+  if (!event.active) sim.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(event, d) {
+  d.fx = event.x;
+  d.fy = event.y;
+}
+
+function dragEnded(event, d) {
+  if (!event.active) sim.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+// ====== RESIZE ======
+window.addEventListener("resize", () => {
+  clearTimeout(window._resizeTimer);
+  window._resizeTimer = setTimeout(() => {
+    W = document.getElementById("graphArea").clientWidth;
+    H = document.getElementById("graphArea").clientHeight;
+    svg.attr("width", W).attr("height", H).attr("viewBox", [0, 0, W, H]);
+    if (sim) { sim.force("center", d3.forceCenter(W / 2, H / 2)); sim.alpha(0.3).restart(); }
+  }, 200);
+});
+
+// ====== KEYBOARD ======
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") resetSearch();
+});
+</script>
+</body>
+</html>
