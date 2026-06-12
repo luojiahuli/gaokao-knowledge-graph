@@ -108,7 +108,7 @@
       "id": "ind_ai",
       "name": "人工智能",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 18,
       "desc": "涵盖大模型、计算机视觉、自然语言处理、AI芯片等，是国家科技自立自强的核心领域。十五五期间AI产业化将加速推进，AI+千行百业创造巨大就业空间。",
       "is_star": true,
@@ -123,7 +123,7 @@
       "id": "ind_semi",
       "name": "半导体/集成电路",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 16,
       "desc": "芯片设计、制造、封测、设备和材料全产业链国产化突破。卡脖子技术攻关核心领域，国产替代空间巨大。",
       "is_star": true,
@@ -137,7 +137,7 @@
       "id": "ind_new_energy",
       "name": "新能源(光伏/风电/储能)",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 18,
       "desc": "光伏、风电、储能电池、氢能等清洁能源产业链。碳中和目标驱动下，新能源装机容量持续爆发式增长。",
       "is_star": true,
@@ -152,7 +152,7 @@
       "id": "ind_ev",
       "name": "新能源汽车",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 16,
       "desc": "电动汽车、智能网联汽车、动力电池、充换电设施等。中国新能源汽车已形成全球领先优势，出口增长迅猛。",
       "is_star": true,
@@ -181,7 +181,7 @@
       "id": "ind_quantum",
       "name": "量子信息",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 8,
       "desc": "量子计算、量子通信、量子精密测量。未来产业核心赛道，虽尚处早期但战略意义重大，人才缺口大。",
       "is_star": true,
@@ -195,7 +195,7 @@
       "id": "ind_space",
       "name": "商业航天",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 8,
       "desc": "卫星制造、火箭发射、卫星互联网、太空旅游。十五五重点培育的未来产业，民营航天企业快速崛起。",
       "is_star": true,
@@ -210,7 +210,7 @@
       "id": "ind_low_alt",
       "name": "低空经济",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 10,
       "desc": "无人机、电动垂直起降飞行器(eVTOL)、低空物流、低空旅游。低空经济元年开启，政策密集出台推动产业化。",
       "is_star": true,
@@ -225,7 +225,7 @@
       "id": "ind_digital",
       "name": "数字经济/数据要素",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 18,
       "desc": "大数据、云计算、数据要素市场、产业数字化、数字政府。数据作为第五生产要素，正在催生万亿级市场。",
       "is_star": true,
@@ -240,7 +240,7 @@
       "id": "ind_robot",
       "name": "机器人/人形机器人",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 14,
       "desc": "工业机器人、服务机器人、人形机器人、核心零部件。中国连续多年为全球最大工业机器人市场，人形机器人产业化加速。",
       "is_star": true,
@@ -282,7 +282,7 @@
       "id": "ind_health",
       "name": "医疗健康/银发经济",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 18,
       "desc": "医疗服务、康养产业、健康管理、智慧医疗、养老产业。人口老龄化催生巨大需求，银发经济成为新增长极。",
       "is_star": true,
@@ -343,7 +343,7 @@
       "id": "ind_culture_tourism",
       "name": "文化旅游",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 16,
       "desc": "景区开发、文旅融合、数字文旅、研学旅游、度假经济。中国旅游市场全球最大，文旅融合创造新消费场景。",
       "is_star": true,
@@ -358,7 +358,7 @@
       "id": "ind_film",
       "name": "电影/影视产业",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 10,
       "desc": "电影制作发行、流媒体平台、动画制作、影视特效、短剧出海。从电影大国向电影强国迈进，国产内容质量持续提升。",
       "is_star": true,
@@ -373,7 +373,7 @@
       "id": "ind_culture_export",
       "name": "文化输出/国际传播",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 8,
       "desc": "网络文学出海、游戏出海、短视频出海、中文国际教育、对外文化贸易。中华文化全球影响力持续提升的新兴领域。",
       "is_star": true,
@@ -388,7 +388,7 @@
       "id": "ind_football",
       "name": "足球/体育产业",
       "layer": 2,
-      "type": "industry",
+      "type": "hot",
       "size": 10,
       "desc": "足球职业联赛、体育培训、赛事运营、体育营销、运动装备。足球振兴上升为国家战略，体育产业5万亿目标。",
       "is_star": true,
@@ -1280,116 +1280,93 @@
       "热度": 5
     },
     {
-      "id": "sch_pku_cs",
+      "id": "北京大学",
       "name": "北京大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs",
+        "maj_math",
+        "maj_clinical",
+        "maj_chinese",
+        "maj_finance",
+        "maj_psychology"
+      ],
       "size": 6,
       "tier": "清北",
       "province": "北京",
-      "score_low": 685,
+      "score_low": 660,
       "score_high": 705,
-      "employment_direction": "AI算法、学术界教职、顶级互联网公司研究岗、选调生",
-      "employment_rate": "98%+",
-      "subject_required": "理科"
+      "employment_direction": "AI算法、学术界教职、顶级互联网公司研究岗、选调生 | 基础数学研究、金融量化、AI算法、保险精算 | 北医三院、协和医院等顶级三甲医院临床医生、医学研究 | 学术界、媒体、出版、文化机构、公务员 | 投资银行、基金公司、PE/VC、金融监管、金融科技 | 学术研究、临床心理学、AI人机交互、用户体验",
+      "employment_rate": "98%",
+      "subject_required": "文理兼收, 文科, 理科",
+      "num_majors": 6
     },
     {
-      "id": "sch_tsinghua_cs",
+      "id": "清华大学",
       "name": "清华大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs",
+        "maj_ai"
+      ],
       "size": 6,
       "tier": "清北",
       "province": "北京",
       "score_low": 688,
       "score_high": 710,
-      "employment_direction": "AI研究、芯片设计、顶尖科技公司、量化基金",
-      "employment_rate": "99%+",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_tsinghua_ai",
-      "name": "清华大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_ai",
-      "size": 6,
-      "tier": "清北",
-      "province": "北京",
-      "score_low": 690,
-      "score_high": 710,
-      "employment_direction": "AI顶会科研、大模型创业、顶尖AI Lab研究员、科技公司首席科学家",
-      "employment_rate": "99%+",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_pku_math",
-      "name": "北京大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_math",
-      "size": 6,
-      "tier": "清北",
-      "province": "北京",
-      "score_low": 685,
-      "score_high": 700,
-      "employment_direction": "基础数学研究、金融量化、AI算法、保险精算",
-      "employment_rate": "98%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_pku_clinical",
-      "name": "北京大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_clinical",
-      "size": 6,
-      "tier": "清北",
-      "province": "北京",
-      "score_low": 680,
-      "score_high": 698,
-      "employment_direction": "北医三院、协和医院等顶级三甲医院临床医生、医学研究",
+      "employment_direction": "AI研究、芯片设计、顶尖科技公司、量化基金 | AI顶会科研、大模型创业、顶尖AI Lab研究员、科技公司首席科学家",
       "employment_rate": "99%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_fudan_cs",
+      "id": "复旦大学",
       "name": "复旦大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs",
+        "maj_clinical"
+      ],
+      "size": 5,
+      "tier": "华五",
+      "province": "上海",
+      "score_low": 668,
+      "score_high": 688,
+      "employment_direction": "互联网大厂、金融机构IT、AI创业公司、外资科技企业 | 中山华山医院临床医生、医学研究、公共卫生",
+      "employment_rate": "98%",
+      "subject_required": "理科",
+      "num_majors": 2
+    },
+    {
+      "id": "上海交通大学",
+      "name": "上海交通大学",
+      "layer": 5,
+      "type": "school",
+      "major_ids": [
+        "maj_cs",
+        "maj_clinical"
+      ],
       "size": 5,
       "tier": "华五",
       "province": "上海",
       "score_low": 670,
-      "score_high": 685,
-      "employment_direction": "互联网大厂、金融机构IT、AI创业公司、外资科技企业",
-      "employment_rate": "97%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_jiaoda_cs",
-      "name": "上海交通大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_cs",
-      "size": 5,
-      "tier": "华五",
-      "province": "上海",
-      "score_low": 673,
       "score_high": 690,
-      "employment_direction": "AI算法、自动驾驶、金融科技、头部科技公司",
+      "employment_direction": "AI算法、自动驾驶、金融科技、头部科技公司 | 瑞金医院等顶级三甲医院医生、医学科学家",
       "employment_rate": "98%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_zju_cs",
+      "id": "浙江大学",
       "name": "浙江大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 5,
       "tier": "华五",
       "province": "浙江",
@@ -1397,14 +1374,17 @@
       "score_high": 685,
       "employment_direction": "互联网大厂、AI研究、政府数字化、金融IT",
       "employment_rate": "97%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_nju_cs",
+      "id": "南京大学",
       "name": "南京大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 5,
       "tier": "华五",
       "province": "江苏",
@@ -1412,74 +1392,56 @@
       "score_high": 680,
       "employment_direction": "软件工程、AI研究、互联网企业、选调生",
       "employment_rate": "97%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_hust_cs",
+      "id": "华中科技大学",
       "name": "华中科技大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs",
+        "maj_microelec",
+        "maj_clinical"
+      ],
       "size": 4,
       "tier": "985",
       "province": "湖北",
-      "score_low": 640,
+      "score_low": 635,
       "score_high": 665,
-      "employment_direction": "华为、腾讯等IT企业、光电子信息产业、AI应用开发",
+      "employment_direction": "华为、腾讯等IT企业、光电子信息产业、AI应用开发 | 长江存储等芯片企业、半导体设备厂商、EDA公司 | 武汉同济/协和等医院临床医生、医学研究",
       "employment_rate": "96%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 3
     },
     {
-      "id": "sch_hust_microelec",
-      "name": "华中科技大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_microelec",
-      "size": 4,
-      "tier": "985",
-      "province": "湖北",
-      "score_low": 638,
-      "score_high": 660,
-      "employment_direction": "长江存储等芯片企业、半导体设备厂商、EDA公司",
-      "employment_rate": "95%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_buaa_cs",
+      "id": "北京航空航天大学",
       "name": "北京航空航天大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
-      "size": 4,
-      "tier": "985",
-      "province": "北京",
-      "score_low": 650,
-      "score_high": 675,
-      "employment_direction": "航空航天软件、军工信息化、AI算法、互联网大厂",
-      "employment_rate": "98%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_buaa_aero",
-      "name": "北京航空航天大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_aero",
+      "major_ids": [
+        "maj_cs",
+        "maj_aero"
+      ],
       "size": 4,
       "tier": "985",
       "province": "北京",
       "score_low": 648,
-      "score_high": 670,
-      "employment_direction": "航天院所、商业航天公司、航空工业、无人机企业",
+      "score_high": 675,
+      "employment_direction": "航空航天软件、军工信息化、AI算法、互联网大厂 | 航天院所、商业航天公司、航空工业、无人机企业",
       "employment_rate": "98%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_bit_ee",
+      "id": "北京理工大学",
       "name": "北京理工大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_ee",
+      "major_ids": [
+        "maj_ee"
+      ],
       "size": 4,
       "tier": "985",
       "province": "北京",
@@ -1487,149 +1449,112 @@
       "score_high": 660,
       "employment_direction": "军工电子、雷达系统、通信设备、芯片设计",
       "employment_rate": "97%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_tju_mech",
+      "id": "天津大学",
       "name": "天津大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_mech",
-      "size": 4,
-      "tier": "985",
-      "province": "天津",
-      "score_low": 630,
-      "score_high": 655,
-      "employment_direction": "高端装备制造、精密仪器、汽车工业、工程机械",
-      "employment_rate": "96%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_tju_chem",
-      "name": "天津大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_chem_eng",
+      "major_ids": [
+        "maj_mech",
+        "maj_chem_eng"
+      ],
       "size": 4,
       "tier": "985",
       "province": "天津",
       "score_low": 625,
-      "score_high": 650,
-      "employment_direction": "新能源电池、石化化工、材料企业、储能企业",
-      "employment_rate": "95%",
-      "subject_required": "理科"
+      "score_high": 655,
+      "employment_direction": "高端装备制造、精密仪器、汽车工业、工程机械 | 新能源电池、石化化工、材料企业、储能企业",
+      "employment_rate": "96%",
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_scut_ee",
+      "id": "华南理工大学",
       "name": "华南理工大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_ee",
-      "size": 4,
-      "tier": "985",
-      "province": "广东",
-      "score_low": 620,
-      "score_high": 648,
-      "employment_direction": "华为/中兴等通信企业、半导体、智能硬件",
-      "employment_rate": "97%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_scut_energy",
-      "name": "华南理工大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_energy",
+      "major_ids": [
+        "maj_ee",
+        "maj_energy"
+      ],
       "size": 4,
       "tier": "985",
       "province": "广东",
       "score_low": 618,
-      "score_high": 645,
-      "employment_direction": "新能源企业(比亚迪、宁德时代等)、电力系统、储能企业",
+      "score_high": 648,
+      "employment_direction": "华为/中兴等通信企业、半导体、智能硬件 | 新能源企业(比亚迪、宁德时代等)、电力系统、储能企业",
       "employment_rate": "96%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_suda_cs",
+      "id": "苏州大学",
       "name": "苏州大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs",
+        "maj_pharmacy"
+      ],
       "size": 3,
       "tier": "211",
       "province": "江苏",
-      "score_low": 590,
+      "score_low": 575,
       "score_high": 620,
-      "employment_direction": "长三角IT企业、外企研发中心、金融科技公司",
-      "employment_rate": "95%",
-      "subject_required": "理科"
+      "employment_direction": "长三角IT企业、外企研发中心、金融科技公司 | 制药企业、药物研发、CRO公司、药监部门",
+      "employment_rate": "94%",
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_nbu_cs",
+      "id": "宁波大学",
       "name": "宁波大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
-      "size": 2,
-      "tier": "一本",
-      "province": "浙江",
-      "score_low": 570,
-      "score_high": 595,
-      "employment_direction": "地方IT企业、银行科技部、制造业信息化",
-      "employment_rate": "93%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_nbu_mech",
-      "name": "宁波大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_mech",
+      "major_ids": [
+        "maj_cs",
+        "maj_mech"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "浙江",
       "score_low": 560,
-      "score_high": 585,
-      "employment_direction": "宁波制造业企业、汽车零部件、模具设计",
+      "score_high": 595,
+      "employment_direction": "地方IT企业、银行科技部、制造业信息化 | 宁波制造业企业、汽车零部件、模具设计",
       "employment_rate": "92%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_hdu_cs",
+      "id": "杭州电子科技大学",
       "name": "杭州电子科技大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
-      "size": 2,
-      "tier": "一本",
-      "province": "浙江",
-      "score_low": 580,
-      "score_high": 610,
-      "employment_direction": "杭州互联网企业、IT公司、电子制造、通信企业",
-      "employment_rate": "96%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_hdu_ee",
-      "name": "杭州电子科技大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_ee",
+      "major_ids": [
+        "maj_cs",
+        "maj_ee"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "浙江",
       "score_low": 575,
-      "score_high": 605,
-      "employment_direction": "电子制造、通信设备、芯片测试、嵌入式开发",
-      "employment_rate": "95%",
-      "subject_required": "理科"
+      "score_high": 610,
+      "employment_direction": "杭州互联网企业、IT公司、电子制造、通信企业 | 电子制造、通信设备、芯片测试、嵌入式开发",
+      "employment_rate": "96%",
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_njust_auto",
+      "id": "南京理工大学",
       "name": "南京理工大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_automation",
+      "major_ids": [
+        "maj_automation"
+      ],
       "size": 3,
       "tier": "211",
       "province": "江苏",
@@ -1637,14 +1562,17 @@
       "score_high": 620,
       "employment_direction": "智能制造、军工自动化、工业机器人、汽车电子",
       "employment_rate": "96%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_ecust_chem",
+      "id": "华东理工大学",
       "name": "华东理工大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_chem_eng",
+      "major_ids": [
+        "maj_chem_eng"
+      ],
       "size": 3,
       "tier": "211",
       "province": "上海",
@@ -1652,14 +1580,17 @@
       "score_high": 615,
       "employment_direction": "化工企业、新材料、新能源电池、医药企业",
       "employment_rate": "95%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_shu_materials",
+      "id": "上海大学",
       "name": "上海大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_materials",
+      "major_ids": [
+        "maj_materials"
+      ],
       "size": 3,
       "tier": "211",
       "province": "上海",
@@ -1667,14 +1598,17 @@
       "score_high": 610,
       "employment_direction": "新材料企业、汽车材料、半导体材料、检测认证",
       "employment_rate": "94%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_whut_materials",
+      "id": "武汉理工大学",
       "name": "武汉理工大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_materials",
+      "major_ids": [
+        "maj_materials"
+      ],
       "size": 3,
       "tier": "211",
       "province": "湖北",
@@ -1682,14 +1616,17 @@
       "score_high": 605,
       "employment_direction": "建材行业、汽车材料、船舶材料、新能源材料",
       "employment_rate": "95%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_cqu_mech",
+      "id": "重庆大学",
       "name": "重庆大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_mech",
+      "major_ids": [
+        "maj_mech"
+      ],
       "size": 4,
       "tier": "985",
       "province": "重庆",
@@ -1697,104 +1634,74 @@
       "score_high": 650,
       "employment_direction": "汽车制造、高端装备、机械设计、智能制造",
       "employment_rate": "96%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_xidian_cs",
+      "id": "西安电子科技大学",
       "name": "西安电子科技大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
-      "size": 3,
-      "tier": "211",
-      "province": "陕西",
-      "score_low": 600,
-      "score_high": 635,
-      "employment_direction": "通信企业(华为/中兴)、军工电子、网络安全、AI",
-      "employment_rate": "97%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_xidian_ee",
-      "name": "西安电子科技大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_ee",
+      "major_ids": [
+        "maj_cs",
+        "maj_ee"
+      ],
       "size": 3,
       "tier": "211",
       "province": "陕西",
       "score_low": 595,
-      "score_high": 630,
-      "employment_direction": "雷达电子、通信系统、芯片设计、军工电子",
+      "score_high": 635,
+      "employment_direction": "通信企业(华为/中兴)、军工电子、网络安全、AI | 雷达电子、通信系统、芯片设计、军工电子",
       "employment_rate": "97%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_bupt_cs",
+      "id": "北京邮电大学",
       "name": "北京邮电大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
-      "size": 3,
-      "tier": "211",
-      "province": "北京",
-      "score_low": 610,
-      "score_high": 645,
-      "employment_direction": "通信运营商、互联网大厂、金融IT、网络安全",
-      "employment_rate": "98%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_bupt_ee",
-      "name": "北京邮电大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_ee",
+      "major_ids": [
+        "maj_cs",
+        "maj_ee"
+      ],
       "size": 3,
       "tier": "211",
       "province": "北京",
       "score_low": 605,
-      "score_high": 640,
-      "employment_direction": "通信设备商、芯片企业、运营商研究院、卫星通信",
-      "employment_rate": "97%",
-      "subject_required": "理科"
+      "score_high": 645,
+      "employment_direction": "通信运营商、互联网大厂、金融IT、网络安全 | 通信设备商、芯片企业、运营商研究院、卫星通信",
+      "employment_rate": "98%",
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_cuc_journalism",
+      "id": "中国传媒大学",
       "name": "中国传媒大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_journalism",
-      "size": 3,
-      "tier": "211",
-      "province": "北京",
-      "score_low": 590,
-      "score_high": 630,
-      "employment_direction": "主流媒体、新媒体平台、品牌公关、内容制作",
-      "employment_rate": "95%",
-      "subject_required": "文科"
-    },
-    {
-      "id": "sch_cuc_film",
-      "name": "中国传媒大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_film",
+      "major_ids": [
+        "maj_journalism",
+        "maj_film"
+      ],
       "size": 3,
       "tier": "211",
       "province": "北京",
       "score_low": 580,
-      "score_high": 620,
-      "employment_direction": "电视台、视频平台、影视公司、MCN机构",
+      "score_high": 630,
+      "employment_direction": "主流媒体、新媒体平台、品牌公关、内容制作 | 电视台、视频平台、影视公司、MCN机构",
       "employment_rate": "94%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收, 文科",
+      "num_majors": 2
     },
     {
-      "id": "sch_bfsu_intl",
+      "id": "北京外国语大学",
       "name": "北京外国语大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_intl_relations",
+      "major_ids": [
+        "maj_intl_relations"
+      ],
       "size": 3,
       "tier": "211",
       "province": "北京",
@@ -1802,74 +1709,36 @@
       "score_high": 635,
       "employment_direction": "外交部等涉外机构、国际组织、跨国企业、对外文化交流",
       "employment_rate": "96%",
-      "subject_required": "文科"
+      "subject_required": "文科",
+      "num_majors": 1
     },
     {
-      "id": "sch_pku_chinese",
-      "name": "北京大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_chinese",
-      "size": 6,
-      "tier": "清北",
-      "province": "北京",
-      "score_low": 660,
-      "score_high": 685,
-      "employment_direction": "学术界、媒体、出版、文化机构、公务员",
-      "employment_rate": "97%",
-      "subject_required": "文科"
-    },
-    {
-      "id": "sch_ruc_journalism",
+      "id": "中国人民大学",
       "name": "中国人民大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_journalism",
+      "major_ids": [
+        "maj_journalism",
+        "maj_finance"
+      ],
       "size": 4,
       "tier": "985",
       "province": "北京",
       "score_low": 645,
-      "score_high": 670,
-      "employment_direction": "主流媒体、党政宣传、品牌公关、互联网内容",
-      "employment_rate": "97%",
-      "subject_required": "文科"
-    },
-    {
-      "id": "sch_pku_finance",
-      "name": "北京大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_finance",
-      "size": 6,
-      "tier": "清北",
-      "province": "北京",
-      "score_low": 680,
-      "score_high": 700,
-      "employment_direction": "投资银行、基金公司、PE/VC、金融监管、金融科技",
-      "employment_rate": "99%",
-      "subject_required": "文理兼收"
-    },
-    {
-      "id": "sch_ruc_finance",
-      "name": "中国人民大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_finance",
-      "size": 4,
-      "tier": "985",
-      "province": "北京",
-      "score_low": 650,
       "score_high": 675,
-      "employment_direction": "银行总行、券商投行、基金公司、金融监管部门",
+      "employment_direction": "主流媒体、党政宣传、品牌公关、互联网内容 | 银行总行、券商投行、基金公司、金融监管部门",
       "employment_rate": "98%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收, 文科",
+      "num_majors": 2
     },
     {
-      "id": "sch_shufe_finance",
+      "id": "上海财经大学",
       "name": "上海财经大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_finance",
+      "major_ids": [
+        "maj_finance"
+      ],
       "size": 3,
       "tier": "211",
       "province": "上海",
@@ -1877,14 +1746,17 @@
       "score_high": 655,
       "employment_direction": "金融机构、咨询公司、企业财务、金融科技",
       "employment_rate": "97%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_cufe_finance",
+      "id": "中央财经大学",
       "name": "中央财经大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_finance",
+      "major_ids": [
+        "maj_finance"
+      ],
       "size": 3,
       "tier": "211",
       "province": "北京",
@@ -1892,14 +1764,17 @@
       "score_high": 650,
       "employment_direction": "银行、券商、保险、金融监管、央企财务",
       "employment_rate": "97%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_sysu_clinical",
+      "id": "中山大学",
       "name": "中山大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_clinical",
+      "major_ids": [
+        "maj_clinical"
+      ],
       "size": 4,
       "tier": "985",
       "province": "广东",
@@ -1907,29 +1782,17 @@
       "score_high": 670,
       "employment_direction": "华南地区三甲医院、医学研究、公共卫生",
       "employment_rate": "98%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_hust_clinical",
-      "name": "华中科技大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_clinical",
-      "size": 4,
-      "tier": "985",
-      "province": "湖北",
-      "score_low": 635,
-      "score_high": 665,
-      "employment_direction": "武汉同济/协和等医院临床医生、医学研究",
-      "employment_rate": "98%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_scu_stomatology",
+      "id": "四川大学",
       "name": "四川大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_clinical",
+      "major_ids": [
+        "maj_clinical"
+      ],
       "size": 4,
       "tier": "985",
       "province": "四川",
@@ -1937,29 +1800,17 @@
       "score_high": 660,
       "employment_direction": "华西医院等三甲医院、口腔医学、临床研究",
       "employment_rate": "98%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_suda_pharmacy",
-      "name": "苏州大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_pharmacy",
-      "size": 3,
-      "tier": "211",
-      "province": "江苏",
-      "score_low": 575,
-      "score_high": 605,
-      "employment_direction": "制药企业、药物研发、CRO公司、药监部门",
-      "employment_rate": "94%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_cpu_pharmacy",
+      "id": "中国药科大学",
       "name": "中国药科大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_pharmacy",
+      "major_ids": [
+        "maj_pharmacy"
+      ],
       "size": 3,
       "tier": "211",
       "province": "江苏",
@@ -1967,14 +1818,17 @@
       "score_high": 600,
       "employment_direction": "创新药研发、医药企业、药监系统、药物分析",
       "employment_rate": "96%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_smu_clinical",
+      "id": "南方医科大学",
       "name": "南方医科大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_clinical",
+      "major_ids": [
+        "maj_clinical"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "广东",
@@ -1982,14 +1836,17 @@
       "score_high": 610,
       "employment_direction": "广东地区医院、基层医疗、医学研究",
       "employment_rate": "95%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_zjut_mech",
+      "id": "浙江工业大学",
       "name": "浙江工业大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_mech",
+      "major_ids": [
+        "maj_mech"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "浙江",
@@ -1997,14 +1854,17 @@
       "score_high": 595,
       "employment_direction": "浙江制造企业、机械设计、智能制造、汽车零部件",
       "employment_rate": "94%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_nankai_math",
+      "id": "南开大学",
       "name": "南开大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_math",
+      "major_ids": [
+        "maj_math"
+      ],
       "size": 4,
       "tier": "985",
       "province": "天津",
@@ -2012,14 +1872,17 @@
       "score_high": 665,
       "employment_direction": "学术研究、金融量化、AI算法、保险精算、数据科学",
       "employment_rate": "96%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_usst_energy",
+      "id": "上海理工大学",
       "name": "上海理工大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_energy",
+      "major_ids": [
+        "maj_energy"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "上海",
@@ -2027,14 +1890,17 @@
       "score_high": 580,
       "employment_direction": "新能源企业、电力设备、节能环保企业、检测认证",
       "employment_rate": "93%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_cqut_cs",
+      "id": "重庆理工大学",
       "name": "重庆理工大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 1,
       "tier": "二本",
       "province": "重庆",
@@ -2042,14 +1908,17 @@
       "score_high": 540,
       "employment_direction": "地方IT企业、制造业信息化、银行科技部、系统运维",
       "employment_rate": "90%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_gdut_cs",
+      "id": "广东工业大学",
       "name": "广东工业大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "广东",
@@ -2057,14 +1926,17 @@
       "score_high": 590,
       "employment_direction": "广东IT企业、通信设备商、智能制造业信息化",
       "employment_rate": "93%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_bisu_cultural",
+      "id": "北京第二外国语学院",
       "name": "北京第二外国语学院",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cultural_mgt",
+      "major_ids": [
+        "maj_cultural_mgt"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "北京",
@@ -2072,29 +1944,36 @@
       "score_high": 585,
       "employment_direction": "文旅企业、国际文化交流、涉外旅游、文化贸易",
       "employment_rate": "92%",
-      "subject_required": "文科"
+      "subject_required": "文科",
+      "num_majors": 1
     },
     {
-      "id": "sch_shnu_cultural",
+      "id": "上海师范大学",
       "name": "上海师范大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cultural_mgt",
+      "major_ids": [
+        "maj_cultural_mgt",
+        "maj_psychology"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "上海",
       "score_low": 540,
       "score_high": 575,
-      "employment_direction": "文化机构、文旅企业、教育培训、社区文化管理",
+      "employment_direction": "文化机构、文旅企业、教育培训、社区文化管理 | 学校心理老师、心理咨询机构、HR、用户体验",
       "employment_rate": "91%",
-      "subject_required": "文科"
+      "subject_required": "文理兼收, 文科",
+      "num_majors": 2
     },
     {
-      "id": "sch_cdsu_sports",
+      "id": "成都体育学院",
       "name": "成都体育学院",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_sports",
+      "major_ids": [
+        "maj_sports"
+      ],
       "size": 1,
       "tier": "二本",
       "province": "四川",
@@ -2102,14 +1981,17 @@
       "score_high": 530,
       "employment_direction": "体育教师、体育管理、运动康复、体育培训",
       "employment_rate": "90%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_bsu_sports",
+      "id": "北京体育大学",
       "name": "北京体育大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_sports",
+      "major_ids": [
+        "maj_sports"
+      ],
       "size": 3,
       "tier": "211",
       "province": "北京",
@@ -2117,14 +1999,17 @@
       "score_high": 600,
       "employment_direction": "体育管理、运动队、体育媒体、体育营销、体育局",
       "employment_rate": "94%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_nuaa_aero",
+      "id": "南京航空航天大学",
       "name": "南京航空航天大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_aero",
+      "major_ids": [
+        "maj_aero"
+      ],
       "size": 3,
       "tier": "211",
       "province": "江苏",
@@ -2132,74 +2017,36 @@
       "score_high": 630,
       "employment_direction": "航天院所、商飞、无人机企业、航空工业",
       "employment_rate": "97%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_sustech_cs",
+      "id": "南方科技大学",
       "name": "南方科技大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
-      "size": 2,
-      "tier": "一本",
-      "province": "广东",
-      "score_low": 610,
-      "score_high": 645,
-      "employment_direction": "AI研究、科技公司、创业、海外深造",
-      "employment_rate": "96%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_sustech_physics",
-      "name": "南方科技大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_physics",
+      "major_ids": [
+        "maj_cs",
+        "maj_physics"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "广东",
       "score_low": 605,
-      "score_high": 640,
-      "employment_direction": "学术研究、半导体材料、量子信息、光学工程",
-      "employment_rate": "95%",
-      "subject_required": "理科"
+      "score_high": 645,
+      "employment_direction": "AI研究、科技公司、创业、海外深造 | 学术研究、半导体材料、量子信息、光学工程",
+      "employment_rate": "96%",
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_sjtu_clinical",
-      "name": "上海交通大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_clinical",
-      "size": 5,
-      "tier": "华五",
-      "province": "上海",
-      "score_low": 670,
-      "score_high": 690,
-      "employment_direction": "瑞金医院等顶级三甲医院医生、医学科学家",
-      "employment_rate": "99%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_fudan_clinical",
-      "name": "复旦大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_clinical",
-      "size": 5,
-      "tier": "华五",
-      "province": "上海",
-      "score_low": 668,
-      "score_high": 688,
-      "employment_direction": "中山华山医院临床医生、医学研究、公共卫生",
-      "employment_rate": "99%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_tongji_cs",
+      "id": "同济大学",
       "name": "同济大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 4,
       "tier": "985",
       "province": "上海",
@@ -2207,14 +2054,17 @@
       "score_high": 670,
       "employment_direction": "智能交通、智慧城市IT、互联网大厂、汽车软件",
       "employment_rate": "97%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_seu_ee",
+      "id": "东南大学",
       "name": "东南大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_ee",
+      "major_ids": [
+        "maj_ee"
+      ],
       "size": 4,
       "tier": "985",
       "province": "江苏",
@@ -2222,14 +2072,17 @@
       "score_high": 660,
       "employment_direction": "通信电子、芯片设计、智能硬件、物联网",
       "employment_rate": "96%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_whu_cs",
+      "id": "武汉大学",
       "name": "武汉大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 4,
       "tier": "985",
       "province": "湖北",
@@ -2237,14 +2090,17 @@
       "score_high": 668,
       "employment_direction": "互联网大厂、AI算法、测绘遥感IT、金融IT",
       "employment_rate": "96%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_xmu_finance",
+      "id": "厦门大学",
       "name": "厦门大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_finance",
+      "major_ids": [
+        "maj_finance"
+      ],
       "size": 4,
       "tier": "985",
       "province": "福建",
@@ -2252,14 +2108,17 @@
       "score_high": 660,
       "employment_direction": "银行、券商投行、基金、会计事务所、金融监管",
       "employment_rate": "97%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_jlu_cs",
+      "id": "吉林大学",
       "name": "吉林大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 4,
       "tier": "985",
       "province": "吉林",
@@ -2267,44 +2126,36 @@
       "score_high": 645,
       "employment_direction": "IT企业、汽车电子、AI应用、政府信息化",
       "employment_rate": "94%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_hit_cs",
+      "id": "哈尔滨工业大学",
       "name": "哈尔滨工业大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
-      "size": 4,
-      "tier": "985",
-      "province": "黑龙江",
-      "score_low": 640,
-      "score_high": 670,
-      "employment_direction": "航天软件、AI研究、机器人软件、军工IT、互联网",
-      "employment_rate": "97%",
-      "subject_required": "理科"
-    },
-    {
-      "id": "sch_hit_robot",
-      "name": "哈尔滨工业大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_robot",
+      "major_ids": [
+        "maj_cs",
+        "maj_robot"
+      ],
       "size": 4,
       "tier": "985",
       "province": "黑龙江",
       "score_low": 638,
-      "score_high": 665,
-      "employment_direction": "机器人研发、航天器制造、智能制造、高端装备",
+      "score_high": 670,
+      "employment_direction": "航天软件、AI研究、机器人软件、军工IT、互联网 | 机器人研发、航天器制造、智能制造、高端装备",
       "employment_rate": "98%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 2
     },
     {
-      "id": "sch_nwpu_aero",
+      "id": "西北工业大学",
       "name": "西北工业大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_aero",
+      "major_ids": [
+        "maj_aero"
+      ],
       "size": 4,
       "tier": "985",
       "province": "陕西",
@@ -2312,14 +2163,17 @@
       "score_high": 655,
       "employment_direction": "航空航天院所、无人机企业、军工航空",
       "employment_rate": "97%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_lzu_agri",
+      "id": "兰州大学",
       "name": "兰州大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_agri",
+      "major_ids": [
+        "maj_agri"
+      ],
       "size": 4,
       "tier": "985",
       "province": "甘肃",
@@ -2327,14 +2181,17 @@
       "score_high": 630,
       "employment_direction": "农业科研、种业企业、生态保护、草业科学",
       "employment_rate": "92%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_heu_auto",
+      "id": "哈尔滨工程大学",
       "name": "哈尔滨工程大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_automation",
+      "major_ids": [
+        "maj_automation"
+      ],
       "size": 3,
       "tier": "211",
       "province": "黑龙江",
@@ -2342,14 +2199,17 @@
       "score_high": 600,
       "employment_direction": "船舶自动化、军工控制、智能制造、海洋工程",
       "employment_rate": "95%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_nchu_cs",
+      "id": "南昌大学",
       "name": "南昌大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 3,
       "tier": "211",
       "province": "江西",
@@ -2357,14 +2217,17 @@
       "score_high": 595,
       "employment_direction": "地方IT企业、制造业信息化、银行IT、通信运营商",
       "employment_rate": "92%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_hunnu_chinese",
+      "id": "湖南师范大学",
       "name": "湖南师范大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_chinese",
+      "major_ids": [
+        "maj_chinese"
+      ],
       "size": 3,
       "tier": "211",
       "province": "湖南",
@@ -2372,29 +2235,17 @@
       "score_high": 595,
       "employment_direction": "教育行业、媒体出版、公务员、文化机构",
       "employment_rate": "93%",
-      "subject_required": "文科"
+      "subject_required": "文科",
+      "num_majors": 1
     },
     {
-      "id": "sch_shnu_psychology",
-      "name": "上海师范大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_psychology",
-      "size": 2,
-      "tier": "一本",
-      "province": "上海",
-      "score_low": 540,
-      "score_high": 575,
-      "employment_direction": "学校心理老师、心理咨询机构、HR、用户体验",
-      "employment_rate": "91%",
-      "subject_required": "文理兼收"
-    },
-    {
-      "id": "sch_nbue_elderly",
+      "id": "宁波财经学院",
       "name": "宁波财经学院",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_elderly",
+      "major_ids": [
+        "maj_elderly"
+      ],
       "size": 1,
       "tier": "二本",
       "province": "浙江",
@@ -2402,14 +2253,17 @@
       "score_high": 530,
       "employment_direction": "养老机构管理、健康管理、社区服务、保险养老",
       "employment_rate": "88%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_cueb_economics",
+      "id": "首都经济贸易大学",
       "name": "首都经济贸易大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_economics",
+      "major_ids": [
+        "maj_economics"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "北京",
@@ -2417,14 +2271,17 @@
       "score_high": 600,
       "employment_direction": "银行、咨询、政府经济部门、企业经济分析",
       "employment_rate": "95%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_ynu_eco",
+      "id": "云南大学",
       "name": "云南大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_economics",
+      "major_ids": [
+        "maj_economics"
+      ],
       "size": 3,
       "tier": "211",
       "province": "云南",
@@ -2432,14 +2289,17 @@
       "score_high": 590,
       "employment_direction": "银行、地方经济部门、旅游企业、外贸公司",
       "employment_rate": "91%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_ccnu_psychology",
+      "id": "华中师范大学",
       "name": "华中师范大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_psychology",
+      "major_ids": [
+        "maj_psychology"
+      ],
       "size": 3,
       "tier": "211",
       "province": "湖北",
@@ -2447,14 +2307,17 @@
       "score_high": 600,
       "employment_direction": "教育心理学、心理健康教师、用户体验研究、HR",
       "employment_rate": "93%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     },
     {
-      "id": "sch_bjtu_cs",
+      "id": "北京交通大学",
       "name": "北京交通大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 3,
       "tier": "211",
       "province": "北京",
@@ -2462,14 +2325,17 @@
       "score_high": 640,
       "employment_direction": "轨道交通信息化、互联网企业、银行IT、通信",
       "employment_rate": "97%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_swjtu_mech",
+      "id": "西南交通大学",
       "name": "西南交通大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_mech",
+      "major_ids": [
+        "maj_mech"
+      ],
       "size": 3,
       "tier": "211",
       "province": "四川",
@@ -2477,14 +2343,17 @@
       "score_high": 610,
       "employment_direction": "轨道交通装备、机械设计、高铁技术、工程机械",
       "employment_rate": "95%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_fzu_cs",
+      "id": "福州大学",
       "name": "福州大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 3,
       "tier": "211",
       "province": "福建",
@@ -2492,14 +2361,17 @@
       "score_high": 595,
       "employment_direction": "福建IT企业、银行科技部、制造业信息化",
       "employment_rate": "93%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_gzu_cs",
+      "id": "贵州大学",
       "name": "贵州大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_cs",
+      "major_ids": [
+        "maj_cs"
+      ],
       "size": 3,
       "tier": "211",
       "province": "贵州",
@@ -2507,14 +2379,17 @@
       "score_high": 575,
       "employment_direction": "地方IT企业、大数据产业、政府数字化、运营商",
       "employment_rate": "90%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_taru_agri",
+      "id": "塔里木大学",
       "name": "塔里木大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_agri",
+      "major_ids": [
+        "maj_agri"
+      ],
       "size": 1,
       "tier": "二本",
       "province": "新疆",
@@ -2522,14 +2397,17 @@
       "score_high": 460,
       "employment_direction": "新疆农业、林业局、兵团农业技术、基层农技",
       "employment_rate": "85%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_sdfmu_clinical",
+      "id": "山东第一医科大学",
       "name": "山东第一医科大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_clinical",
+      "major_ids": [
+        "maj_clinical"
+      ],
       "size": 2,
       "tier": "一本",
       "province": "山东",
@@ -2537,29 +2415,17 @@
       "score_high": 590,
       "employment_direction": "山东医院临床、基层医疗、医学检验",
       "employment_rate": "93%",
-      "subject_required": "理科"
+      "subject_required": "理科",
+      "num_majors": 1
     },
     {
-      "id": "sch_pku_psychology",
-      "name": "北京大学",
-      "layer": 5,
-      "type": "school",
-      "major_id": "maj_psychology",
-      "size": 6,
-      "tier": "清北",
-      "province": "北京",
-      "score_low": 660,
-      "score_high": 680,
-      "employment_direction": "学术研究、临床心理学、AI人机交互、用户体验",
-      "employment_rate": "97%",
-      "subject_required": "文理兼收"
-    },
-    {
-      "id": "sch_bnu_psychology",
+      "id": "北京师范大学",
       "name": "北京师范大学",
       "layer": 5,
       "type": "school",
-      "major_id": "maj_psychology",
+      "major_ids": [
+        "maj_psychology"
+      ],
       "size": 4,
       "tier": "985",
       "province": "北京",
@@ -2567,873 +2433,1047 @@
       "score_high": 665,
       "employment_direction": "教育心理学、学校心理健康、科研、用户体验",
       "employment_rate": "96%",
-      "subject_required": "文理兼收"
+      "subject_required": "文理兼收",
+      "num_majors": 1
     }
   ],
   "links": [
     {
+      "id": "l1",
       "source": "p_15_5",
       "target": "ind_ai",
       "relation": "包含行业"
     },
     {
+      "id": "l2",
       "source": "p_sci_tech",
       "target": "ind_semi",
       "relation": "包含行业"
     },
     {
+      "id": "l3",
       "source": "p_15_5",
       "target": "ind_new_energy",
       "relation": "包含行业"
     },
     {
+      "id": "l4",
       "source": "p_15_5",
       "target": "ind_ev",
       "relation": "包含行业"
     },
     {
+      "id": "l5",
       "source": "p_sci_tech",
       "target": "ind_bio",
       "relation": "包含行业"
     },
     {
+      "id": "l6",
       "source": "p_sci_tech",
       "target": "ind_quantum",
       "relation": "包含行业"
     },
     {
+      "id": "l7",
       "source": "p_15_5",
       "target": "ind_space",
       "relation": "包含行业"
     },
     {
+      "id": "l8",
       "source": "p_gov_report",
       "target": "ind_low_alt",
       "relation": "包含行业"
     },
     {
+      "id": "l9",
       "source": "p_15_5",
       "target": "ind_digital",
       "relation": "包含行业"
     },
     {
+      "id": "l10",
       "source": "p_sci_tech",
       "target": "ind_robot",
       "relation": "包含行业"
     },
     {
+      "id": "l11",
       "source": "p_15_5",
       "target": "ind_new_material",
       "relation": "包含行业"
     },
     {
+      "id": "l12",
       "source": "p_15_5",
       "target": "ind_equip",
       "relation": "包含行业"
     },
     {
+      "id": "l13",
       "source": "p_gov_report",
       "target": "ind_health",
       "relation": "包含行业"
     },
     {
+      "id": "l14",
       "source": "p_central_econ",
       "target": "ind_green",
       "relation": "包含行业"
     },
     {
+      "id": "l15",
       "source": "p_finance",
       "target": "ind_fintech",
       "relation": "包含行业"
     },
     {
+      "id": "l16",
       "source": "p_gov_report",
       "target": "ind_agri",
       "relation": "包含行业"
     },
     {
+      "id": "l17",
       "source": "p_culture",
       "target": "ind_culture_tourism",
       "relation": "包含行业"
     },
     {
+      "id": "l18",
       "source": "p_culture",
       "target": "ind_film",
       "relation": "包含行业"
     },
     {
+      "id": "l19",
       "source": "p_culture",
       "target": "ind_culture_export",
       "relation": "包含行业"
     },
     {
+      "id": "l20",
       "source": "p_culture",
       "target": "ind_football",
       "relation": "包含行业"
     },
     {
+      "id": "l21",
       "source": "ind_ai",
       "target": "car_ai_research",
       "relation": "对应岗位"
     },
     {
+      "id": "l22",
       "source": "ind_ai",
       "target": "car_ai_engineer",
       "relation": "对应岗位"
     },
     {
+      "id": "l23",
       "source": "ind_ai",
       "target": "car_ai_chip",
       "relation": "对应岗位"
     },
     {
+      "id": "l24",
       "source": "ind_semi",
       "target": "car_chip_design",
       "relation": "对应岗位"
     },
     {
+      "id": "l25",
       "source": "ind_semi",
       "target": "car_chip_process",
       "relation": "对应岗位"
     },
     {
+      "id": "l26",
       "source": "ind_semi",
       "target": "car_chip_equip",
       "relation": "对应岗位"
     },
     {
+      "id": "l27",
       "source": "ind_new_energy",
       "target": "car_pv_engineer",
       "relation": "对应岗位"
     },
     {
+      "id": "l28",
       "source": "ind_new_energy",
       "target": "car_battery",
       "relation": "对应岗位"
     },
     {
+      "id": "l29",
       "source": "ind_ev",
       "target": "car_ev_engineer",
       "relation": "对应岗位"
     },
     {
+      "id": "l30",
       "source": "ind_ev",
       "target": "car_intel_drive",
       "relation": "对应岗位"
     },
     {
+      "id": "l31",
       "source": "ind_bio",
       "target": "car_drug_dev",
       "relation": "对应岗位"
     },
     {
+      "id": "l32",
       "source": "ind_bio",
       "target": "car_gene_therapy",
       "relation": "对应岗位"
     },
     {
+      "id": "l33",
       "source": "ind_quantum",
       "target": "car_quantum",
       "relation": "对应岗位"
     },
     {
+      "id": "l34",
       "source": "ind_space",
       "target": "car_satellite",
       "relation": "对应岗位"
     },
     {
+      "id": "l35",
       "source": "ind_low_alt",
       "target": "car_uav",
       "relation": "对应岗位"
     },
     {
+      "id": "l36",
       "source": "ind_digital",
       "target": "car_data_eng",
       "relation": "对应岗位"
     },
     {
+      "id": "l37",
       "source": "ind_digital",
       "target": "car_data_analyst",
       "relation": "对应岗位"
     },
     {
+      "id": "l38",
       "source": "ind_robot",
       "target": "car_robot_dev",
       "relation": "对应岗位"
     },
     {
+      "id": "l39",
       "source": "ind_new_material",
       "target": "car_materials",
       "relation": "对应岗位"
     },
     {
+      "id": "l40",
       "source": "ind_equip",
       "target": "car_mech_eng",
       "relation": "对应岗位"
     },
     {
+      "id": "l41",
       "source": "ind_health",
       "target": "car_doctor",
       "relation": "对应岗位"
     },
     {
+      "id": "l42",
       "source": "ind_health",
       "target": "car_elderly",
       "relation": "对应岗位"
     },
     {
+      "id": "l43",
       "source": "ind_green",
       "target": "car_env_eng",
       "relation": "对应岗位"
     },
     {
+      "id": "l44",
       "source": "ind_fintech",
       "target": "car_fintech",
       "relation": "对应岗位"
     },
     {
+      "id": "l45",
       "source": "ind_fintech",
       "target": "car_quant_trader",
       "relation": "对应岗位"
     },
     {
+      "id": "l46",
       "source": "ind_agri",
       "target": "car_agri_sci",
       "relation": "对应岗位"
     },
     {
+      "id": "l47",
       "source": "ind_culture_tourism",
       "target": "car_tourism",
       "relation": "对应岗位"
     },
     {
+      "id": "l48",
       "source": "ind_film",
       "target": "car_film_director",
       "relation": "对应岗位"
     },
     {
+      "id": "l49",
       "source": "ind_film",
       "target": "car_film_tech",
       "relation": "对应岗位"
     },
     {
+      "id": "l50",
       "source": "ind_culture_export",
       "target": "car_short_video",
       "relation": "对应岗位"
     },
     {
+      "id": "l51",
       "source": "ind_culture_export",
       "target": "car_game_dev",
       "relation": "对应岗位"
     },
     {
+      "id": "l52",
       "source": "ind_football",
       "target": "car_sports_mgt",
       "relation": "对应岗位"
     },
     {
+      "id": "l53",
       "source": "ind_football",
       "target": "car_sports_coach",
       "relation": "对应岗位"
     },
     {
+      "id": "l54",
       "source": "car_ai_research",
       "target": "maj_cs",
       "relation": "对应专业"
     },
     {
+      "id": "l55",
       "source": "car_ai_research",
       "target": "maj_ai",
       "relation": "对应专业"
     },
     {
+      "id": "l56",
       "source": "car_ai_engineer",
       "target": "maj_software",
       "relation": "对应专业"
     },
     {
+      "id": "l57",
       "source": "car_data_eng",
       "target": "maj_data_sci",
       "relation": "对应专业"
     },
     {
+      "id": "l58",
       "source": "car_chip_design",
       "target": "maj_ee",
       "relation": "对应专业"
     },
     {
+      "id": "l59",
       "source": "car_chip_design",
       "target": "maj_microelec",
       "relation": "对应专业"
     },
     {
+      "id": "l60",
       "source": "car_mech_eng",
       "target": "maj_mech",
       "relation": "对应专业"
     },
     {
+      "id": "l61",
       "source": "car_robot_dev",
       "target": "maj_automation",
       "relation": "对应专业"
     },
     {
+      "id": "l62",
       "source": "car_robot_dev",
       "target": "maj_robot",
       "relation": "对应专业"
     },
     {
+      "id": "l63",
       "source": "car_pv_engineer",
       "target": "maj_energy",
       "relation": "对应专业"
     },
     {
+      "id": "l64",
       "source": "car_materials",
       "target": "maj_materials",
       "relation": "对应专业"
     },
     {
+      "id": "l65",
       "source": "car_battery",
       "target": "maj_chem_eng",
       "relation": "对应专业"
     },
     {
+      "id": "l66",
       "source": "car_quantum",
       "target": "maj_physics",
       "relation": "对应专业"
     },
     {
+      "id": "l67",
       "source": "car_quant_trader",
       "target": "maj_math",
       "relation": "对应专业"
     },
     {
+      "id": "l68",
       "source": "car_data_analyst",
       "target": "maj_statistics",
       "relation": "对应专业"
     },
     {
+      "id": "l69",
       "source": "car_doctor",
       "target": "maj_clinical",
       "relation": "对应专业"
     },
     {
+      "id": "l70",
       "source": "car_drug_dev",
       "target": "maj_pharmacy",
       "relation": "对应专业"
     },
     {
+      "id": "l71",
       "source": "car_gene_therapy",
       "target": "maj_biology",
       "relation": "对应专业"
     },
     {
+      "id": "l72",
       "source": "car_satellite",
       "target": "maj_aero",
       "relation": "对应专业"
     },
     {
+      "id": "l73",
       "source": "car_uav",
       "target": "maj_geography",
       "relation": "对应专业"
     },
     {
+      "id": "l74",
       "source": "car_env_eng",
       "target": "maj_env",
       "relation": "对应专业"
     },
     {
+      "id": "l75",
       "source": "car_fintech",
       "target": "maj_finance",
       "relation": "对应专业"
     },
     {
+      "id": "l76",
       "source": "car_data_analyst",
       "target": "maj_economics",
       "relation": "对应专业"
     },
     {
+      "id": "l77",
       "source": "car_agri_sci",
       "target": "maj_agri",
       "relation": "对应专业"
     },
     {
+      "id": "l78",
       "source": "car_tourism",
       "target": "maj_chinese",
       "relation": "对应专业"
     },
     {
+      "id": "l79",
       "source": "car_short_video",
       "target": "maj_journalism",
       "relation": "对应专业"
     },
     {
+      "id": "l80",
       "source": "car_film_director",
       "target": "maj_film",
       "relation": "对应专业"
     },
     {
+      "id": "l81",
       "source": "car_film_tech",
       "target": "maj_animation",
       "relation": "对应专业"
     },
     {
+      "id": "l82",
       "source": "car_culture_export",
       "target": "maj_cultural_mgt",
       "relation": "对应专业"
     },
     {
+      "id": "l83",
       "source": "car_sports_mgt",
       "target": "maj_sports",
       "relation": "对应专业"
     },
     {
+      "id": "l84",
       "source": "car_elderly",
       "target": "maj_elderly",
       "relation": "对应专业"
     },
     {
+      "id": "l85",
       "source": "car_doctor",
       "target": "maj_psychology",
       "relation": "对应专业"
     },
     {
+      "id": "l86",
       "source": "car_tourism",
       "target": "maj_archaeology",
       "relation": "对应专业"
     },
     {
+      "id": "l87",
       "source": "car_culture_export",
       "target": "maj_intl_relations",
       "relation": "对应专业"
     },
     {
+      "id": "l88",
       "source": "maj_cs",
-      "target": "sch_pku_cs",
+      "target": "北京大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_cs",
-      "target": "sch_tsinghua_cs",
+      "id": "l89",
+      "source": "maj_math",
+      "target": "北京大学",
       "relation": "开设院校"
     },
     {
+      "id": "l90",
+      "source": "maj_clinical",
+      "target": "北京大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l91",
+      "source": "maj_chinese",
+      "target": "北京大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l92",
+      "source": "maj_finance",
+      "target": "北京大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l93",
+      "source": "maj_psychology",
+      "target": "北京大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l94",
+      "source": "maj_cs",
+      "target": "清华大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l95",
       "source": "maj_ai",
-      "target": "sch_tsinghua_ai",
+      "target": "清华大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_math",
-      "target": "sch_pku_math",
+      "id": "l96",
+      "source": "maj_cs",
+      "target": "复旦大学",
       "relation": "开设院校"
     },
     {
+      "id": "l97",
       "source": "maj_clinical",
-      "target": "sch_pku_clinical",
+      "target": "复旦大学",
       "relation": "开设院校"
     },
     {
+      "id": "l98",
       "source": "maj_cs",
-      "target": "sch_fudan_cs",
+      "target": "上海交通大学",
       "relation": "开设院校"
     },
     {
+      "id": "l99",
+      "source": "maj_clinical",
+      "target": "上海交通大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l100",
       "source": "maj_cs",
-      "target": "sch_jiaoda_cs",
+      "target": "浙江大学",
       "relation": "开设院校"
     },
     {
+      "id": "l101",
       "source": "maj_cs",
-      "target": "sch_zju_cs",
+      "target": "南京大学",
       "relation": "开设院校"
     },
     {
+      "id": "l102",
       "source": "maj_cs",
-      "target": "sch_nju_cs",
+      "target": "华中科技大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_cs",
-      "target": "sch_hust_cs",
-      "relation": "开设院校"
-    },
-    {
+      "id": "l103",
       "source": "maj_microelec",
-      "target": "sch_hust_microelec",
+      "target": "华中科技大学",
       "relation": "开设院校"
     },
     {
+      "id": "l104",
+      "source": "maj_clinical",
+      "target": "华中科技大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l105",
       "source": "maj_cs",
-      "target": "sch_buaa_cs",
+      "target": "北京航空航天大学",
       "relation": "开设院校"
     },
     {
+      "id": "l106",
       "source": "maj_aero",
-      "target": "sch_buaa_aero",
+      "target": "北京航空航天大学",
       "relation": "开设院校"
     },
     {
+      "id": "l107",
       "source": "maj_ee",
-      "target": "sch_bit_ee",
+      "target": "北京理工大学",
       "relation": "开设院校"
     },
     {
+      "id": "l108",
       "source": "maj_mech",
-      "target": "sch_tju_mech",
+      "target": "天津大学",
       "relation": "开设院校"
     },
     {
+      "id": "l109",
       "source": "maj_chem_eng",
-      "target": "sch_tju_chem",
+      "target": "天津大学",
       "relation": "开设院校"
     },
     {
+      "id": "l110",
       "source": "maj_ee",
-      "target": "sch_scut_ee",
+      "target": "华南理工大学",
       "relation": "开设院校"
     },
     {
+      "id": "l111",
       "source": "maj_energy",
-      "target": "sch_scut_energy",
+      "target": "华南理工大学",
       "relation": "开设院校"
     },
     {
+      "id": "l112",
       "source": "maj_cs",
-      "target": "sch_suda_cs",
+      "target": "苏州大学",
       "relation": "开设院校"
     },
     {
+      "id": "l113",
+      "source": "maj_pharmacy",
+      "target": "苏州大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l114",
       "source": "maj_cs",
-      "target": "sch_nbu_cs",
+      "target": "宁波大学",
       "relation": "开设院校"
     },
     {
+      "id": "l115",
       "source": "maj_mech",
-      "target": "sch_nbu_mech",
+      "target": "宁波大学",
       "relation": "开设院校"
     },
     {
+      "id": "l116",
       "source": "maj_cs",
-      "target": "sch_hdu_cs",
+      "target": "杭州电子科技大学",
       "relation": "开设院校"
     },
     {
+      "id": "l117",
       "source": "maj_ee",
-      "target": "sch_hdu_ee",
+      "target": "杭州电子科技大学",
       "relation": "开设院校"
     },
     {
+      "id": "l118",
       "source": "maj_automation",
-      "target": "sch_njust_auto",
+      "target": "南京理工大学",
       "relation": "开设院校"
     },
     {
+      "id": "l119",
       "source": "maj_chem_eng",
-      "target": "sch_ecust_chem",
+      "target": "华东理工大学",
       "relation": "开设院校"
     },
     {
+      "id": "l120",
       "source": "maj_materials",
-      "target": "sch_shu_materials",
+      "target": "上海大学",
       "relation": "开设院校"
     },
     {
+      "id": "l121",
       "source": "maj_materials",
-      "target": "sch_whut_materials",
+      "target": "武汉理工大学",
       "relation": "开设院校"
     },
     {
+      "id": "l122",
       "source": "maj_mech",
-      "target": "sch_cqu_mech",
+      "target": "重庆大学",
       "relation": "开设院校"
     },
     {
+      "id": "l123",
       "source": "maj_cs",
-      "target": "sch_xidian_cs",
+      "target": "西安电子科技大学",
       "relation": "开设院校"
     },
     {
+      "id": "l124",
       "source": "maj_ee",
-      "target": "sch_xidian_ee",
+      "target": "西安电子科技大学",
       "relation": "开设院校"
     },
     {
+      "id": "l125",
       "source": "maj_cs",
-      "target": "sch_bupt_cs",
+      "target": "北京邮电大学",
       "relation": "开设院校"
     },
     {
+      "id": "l126",
       "source": "maj_ee",
-      "target": "sch_bupt_ee",
+      "target": "北京邮电大学",
       "relation": "开设院校"
     },
     {
+      "id": "l127",
       "source": "maj_journalism",
-      "target": "sch_cuc_journalism",
+      "target": "中国传媒大学",
       "relation": "开设院校"
     },
     {
+      "id": "l128",
       "source": "maj_film",
-      "target": "sch_cuc_film",
+      "target": "中国传媒大学",
       "relation": "开设院校"
     },
     {
+      "id": "l129",
       "source": "maj_intl_relations",
-      "target": "sch_bfsu_intl",
+      "target": "北京外国语大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_chinese",
-      "target": "sch_pku_chinese",
-      "relation": "开设院校"
-    },
-    {
+      "id": "l130",
       "source": "maj_journalism",
-      "target": "sch_ruc_journalism",
+      "target": "中国人民大学",
       "relation": "开设院校"
     },
     {
+      "id": "l131",
       "source": "maj_finance",
-      "target": "sch_pku_finance",
+      "target": "中国人民大学",
       "relation": "开设院校"
     },
     {
+      "id": "l132",
       "source": "maj_finance",
-      "target": "sch_ruc_finance",
+      "target": "上海财经大学",
       "relation": "开设院校"
     },
     {
+      "id": "l133",
       "source": "maj_finance",
-      "target": "sch_shufe_finance",
+      "target": "中央财经大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_finance",
-      "target": "sch_cufe_finance",
-      "relation": "开设院校"
-    },
-    {
+      "id": "l134",
       "source": "maj_clinical",
-      "target": "sch_sysu_clinical",
+      "target": "中山大学",
       "relation": "开设院校"
     },
     {
+      "id": "l135",
       "source": "maj_clinical",
-      "target": "sch_hust_clinical",
+      "target": "四川大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_clinical",
-      "target": "sch_scu_stomatology",
-      "relation": "开设院校"
-    },
-    {
+      "id": "l136",
       "source": "maj_pharmacy",
-      "target": "sch_suda_pharmacy",
+      "target": "中国药科大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_pharmacy",
-      "target": "sch_cpu_pharmacy",
-      "relation": "开设院校"
-    },
-    {
+      "id": "l137",
       "source": "maj_clinical",
-      "target": "sch_smu_clinical",
+      "target": "南方医科大学",
       "relation": "开设院校"
     },
     {
+      "id": "l138",
       "source": "maj_mech",
-      "target": "sch_zjut_mech",
+      "target": "浙江工业大学",
       "relation": "开设院校"
     },
     {
+      "id": "l139",
       "source": "maj_math",
-      "target": "sch_nankai_math",
+      "target": "南开大学",
       "relation": "开设院校"
     },
     {
+      "id": "l140",
       "source": "maj_energy",
-      "target": "sch_usst_energy",
+      "target": "上海理工大学",
       "relation": "开设院校"
     },
     {
+      "id": "l141",
       "source": "maj_cs",
-      "target": "sch_cqut_cs",
+      "target": "重庆理工大学",
       "relation": "开设院校"
     },
     {
+      "id": "l142",
       "source": "maj_cs",
-      "target": "sch_gdut_cs",
+      "target": "广东工业大学",
       "relation": "开设院校"
     },
     {
+      "id": "l143",
       "source": "maj_cultural_mgt",
-      "target": "sch_bisu_cultural",
+      "target": "北京第二外国语学院",
       "relation": "开设院校"
     },
     {
+      "id": "l144",
       "source": "maj_cultural_mgt",
-      "target": "sch_shnu_cultural",
+      "target": "上海师范大学",
       "relation": "开设院校"
     },
     {
+      "id": "l145",
+      "source": "maj_psychology",
+      "target": "上海师范大学",
+      "relation": "开设院校"
+    },
+    {
+      "id": "l146",
       "source": "maj_sports",
-      "target": "sch_cdsu_sports",
+      "target": "成都体育学院",
       "relation": "开设院校"
     },
     {
+      "id": "l147",
       "source": "maj_sports",
-      "target": "sch_bsu_sports",
+      "target": "北京体育大学",
       "relation": "开设院校"
     },
     {
+      "id": "l148",
       "source": "maj_aero",
-      "target": "sch_nuaa_aero",
+      "target": "南京航空航天大学",
       "relation": "开设院校"
     },
     {
+      "id": "l149",
       "source": "maj_cs",
-      "target": "sch_sustech_cs",
+      "target": "南方科技大学",
       "relation": "开设院校"
     },
     {
+      "id": "l150",
       "source": "maj_physics",
-      "target": "sch_sustech_physics",
+      "target": "南方科技大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_clinical",
-      "target": "sch_sjtu_clinical",
-      "relation": "开设院校"
-    },
-    {
-      "source": "maj_clinical",
-      "target": "sch_fudan_clinical",
-      "relation": "开设院校"
-    },
-    {
+      "id": "l151",
       "source": "maj_cs",
-      "target": "sch_tongji_cs",
+      "target": "同济大学",
       "relation": "开设院校"
     },
     {
+      "id": "l152",
       "source": "maj_ee",
-      "target": "sch_seu_ee",
+      "target": "东南大学",
       "relation": "开设院校"
     },
     {
+      "id": "l153",
       "source": "maj_cs",
-      "target": "sch_whu_cs",
+      "target": "武汉大学",
       "relation": "开设院校"
     },
     {
+      "id": "l154",
       "source": "maj_finance",
-      "target": "sch_xmu_finance",
+      "target": "厦门大学",
       "relation": "开设院校"
     },
     {
+      "id": "l155",
       "source": "maj_cs",
-      "target": "sch_jlu_cs",
+      "target": "吉林大学",
       "relation": "开设院校"
     },
     {
+      "id": "l156",
       "source": "maj_cs",
-      "target": "sch_hit_cs",
+      "target": "哈尔滨工业大学",
       "relation": "开设院校"
     },
     {
+      "id": "l157",
       "source": "maj_robot",
-      "target": "sch_hit_robot",
+      "target": "哈尔滨工业大学",
       "relation": "开设院校"
     },
     {
+      "id": "l158",
       "source": "maj_aero",
-      "target": "sch_nwpu_aero",
+      "target": "西北工业大学",
       "relation": "开设院校"
     },
     {
+      "id": "l159",
       "source": "maj_agri",
-      "target": "sch_lzu_agri",
+      "target": "兰州大学",
       "relation": "开设院校"
     },
     {
+      "id": "l160",
       "source": "maj_automation",
-      "target": "sch_heu_auto",
+      "target": "哈尔滨工程大学",
       "relation": "开设院校"
     },
     {
+      "id": "l161",
       "source": "maj_cs",
-      "target": "sch_nchu_cs",
+      "target": "南昌大学",
       "relation": "开设院校"
     },
     {
+      "id": "l162",
       "source": "maj_chinese",
-      "target": "sch_hunnu_chinese",
+      "target": "湖南师范大学",
       "relation": "开设院校"
     },
     {
-      "source": "maj_psychology",
-      "target": "sch_shnu_psychology",
-      "relation": "开设院校"
-    },
-    {
+      "id": "l163",
       "source": "maj_elderly",
-      "target": "sch_nbue_elderly",
+      "target": "宁波财经学院",
       "relation": "开设院校"
     },
     {
+      "id": "l164",
       "source": "maj_economics",
-      "target": "sch_cueb_economics",
+      "target": "首都经济贸易大学",
       "relation": "开设院校"
     },
     {
+      "id": "l165",
       "source": "maj_economics",
-      "target": "sch_ynu_eco",
+      "target": "云南大学",
       "relation": "开设院校"
     },
     {
+      "id": "l166",
       "source": "maj_psychology",
-      "target": "sch_ccnu_psychology",
+      "target": "华中师范大学",
       "relation": "开设院校"
     },
     {
+      "id": "l167",
       "source": "maj_cs",
-      "target": "sch_bjtu_cs",
+      "target": "北京交通大学",
       "relation": "开设院校"
     },
     {
+      "id": "l168",
       "source": "maj_mech",
-      "target": "sch_swjtu_mech",
+      "target": "西南交通大学",
       "relation": "开设院校"
     },
     {
+      "id": "l169",
       "source": "maj_cs",
-      "target": "sch_fzu_cs",
+      "target": "福州大学",
       "relation": "开设院校"
     },
     {
+      "id": "l170",
       "source": "maj_cs",
-      "target": "sch_gzu_cs",
+      "target": "贵州大学",
       "relation": "开设院校"
     },
     {
+      "id": "l171",
       "source": "maj_agri",
-      "target": "sch_taru_agri",
+      "target": "塔里木大学",
       "relation": "开设院校"
     },
     {
+      "id": "l172",
       "source": "maj_clinical",
-      "target": "sch_sdfmu_clinical",
+      "target": "山东第一医科大学",
       "relation": "开设院校"
     },
     {
+      "id": "l173",
       "source": "maj_psychology",
-      "target": "sch_pku_psychology",
-      "relation": "开设院校"
-    },
-    {
-      "source": "maj_psychology",
-      "target": "sch_bnu_psychology",
+      "target": "北京师范大学",
       "relation": "开设院校"
     }
   ]

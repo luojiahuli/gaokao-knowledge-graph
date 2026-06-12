@@ -115,6 +115,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC"
       <svg id="graphSvg"></svg>
       <div class="legend">
         <div class="legend-row"><span class="legend-dot" style="background:#f59e0b"></span> 政策文件</div>
+        <div class="legend-row"><span class="legend-dot" style="background:#f97316"></span> 热点行业</div>
         <div class="legend-row"><span class="legend-dot" style="background:#a78bfa"></span> 重点行业</div>
         <div class="legend-row"><span class="legend-dot" style="background:#60a5fa"></span> 就业岗位</div>
         <div class="legend-row"><span class="legend-dot" style="background:#34d399"></span> 大学专业</div>
@@ -405,6 +406,11 @@ function render() {
 
 function getNodeColor(d) {
   if (d.type === "policy") return "#f59e0b";
+  if (d.type === "hot") {
+    if (d.supply_demand_status === "供不应求") return "#10b981";
+    if (d.supply_demand_status === "供大于求") return "#ef4444";
+    return "#f97316";
+  }
   if (d.type === "industry") {
     if (d.supply_demand_status === "供不应求") return "#10b981";
     if (d.supply_demand_status === "供大于求") return "#ef4444";
@@ -449,8 +455,8 @@ function showDetail(nodeId) {
     html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开下层行业</div>`;
   }
 
-  if (d.type === "industry") {
-    if (d.is_star) html += `<span class="tag tag-star">★ 重点产业</span> `;
+  if (d.type === "hot" || d.type === "industry") {
+    if (d.is_star || d.type === "hot") html += `<span class="tag tag-star">★ 热点产业</span> `;
     if (d.growth_rate) html += field("增长率", d.growth_rate);
     html += field("就业规模", "●".repeat(Math.round((d.size || 5) / 2)));
     if (d.supply_demand_status) {
@@ -488,6 +494,7 @@ function showDetail(nodeId) {
     html += field("层次", `<span class="tag ${tierCls}">${d.tier || "一本"}</span>`);
     html += field("省份", d.province || "全国");
     html += field("分数范围", `${d.score_low || 0} - ${d.score_high || 750}分`);
+    if (d.num_majors) html += field("开设专业数", `${d.num_majors}个`);
     if (d.employment_direction) html += field("就业方向", d.employment_direction);
     if (d.employment_rate) html += field("就业率", d.employment_rate);
     html += field("科目要求", d.subject_required || "不限");
@@ -505,7 +512,7 @@ function getLayerLabel(layer) {
 }
 
 function getTypeLabel(type) {
-  return { policy: "政策文件", industry: "重点行业", career: "就业岗位", major: "大学专业", school: "开设院校" }[type] || type;
+  return { policy: "政策文件", hot: "热点行业", industry: "重点行业", career: "就业岗位", major: "大学专业", school: "开设院校" }[type] || type;
 }
 
 // ====== SEARCH ======
@@ -519,26 +526,21 @@ function applySearch() {
   // Find matching schools
   graphData.nodes.filter(n => n.type === "school").forEach(n => {
     let ok = true;
-    if (province && n.province !== province) ok = false;
+    if (province && !n.province.includes(province)) ok = false;
     if (score && (n.score_low > score || n.score_high < score)) ok = false;
-    if (subject && n.subject_required !== subject && n.subject_required !== "不限") {
-      ok = false;
-    }
+    if (subject && !n.subject_required.includes(subject)) ok = false;
     if (ok) {
       matched.add(n.id);
-      // Trace parent chain: major -> career -> industry -> policy
-      const majorId = n.major_id;
-      if (majorId) {
+      // Trace parent chain through all majors
+      const majorIds = n.major_ids || [];
+      majorIds.forEach(majorId => {
         matched.add(majorId);
-        const p = parentMap[majorId];
-        if (p) { matched.add(p.parentId);
-          const gp = parentMap[p.parentId];
-          if (gp) { matched.add(gp.parentId);
-            const ggp = parentMap[gp.parentId];
-            if (ggp) matched.add(ggp.parentId);
-          }
+        let cur = parentMap[majorId];
+        while (cur) {
+          matched.add(cur.parentId);
+          cur = parentMap[cur.parentId];
         }
-      }
+      });
     }
   });
 
