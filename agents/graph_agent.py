@@ -60,7 +60,7 @@ class GraphAssemblyAgent(BaseAgent):
         # Layer 3: Careers
         for car in ctx.careers:
             score = car.get("demand_score", 5)
-            size = score * 1.5
+            size = score * 2
             demand_info = ctx.supply_demand.get("careers", {}).get(car["id"], {})
             status = demand_info.get("status", "供需平衡")
             nodes.append({
@@ -85,7 +85,7 @@ class GraphAssemblyAgent(BaseAgent):
 
         # Layer 4: Majors
         for m in ctx.majors:
-            size = m.get("热度", 5) * 1.5
+            size = m.get("热度", 5) * 2
             nodes.append({
                 "id": m["id"],
                 "name": m["name"],
@@ -187,5 +187,5 @@ class GraphAssemblyAgent(BaseAgent):
 
 
 def _tier_size(tier: str) -> int:
-    mapping = {"清北": 6, "华五": 5, "985": 4, "211": 3, "一本": 2, "二本": 1}
-    return mapping.get(tier, 3)
+    mapping = {"清北": 18, "华五": 15, "985": 12, "211": 10, "一本": 8, "二本": 6}
+    return mapping.get(tier, 8)

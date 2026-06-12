@@ -126,7 +126,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC"
           <span class="legend-dot" style="background:#6b7280;margin-left:8px"></span> 供需平衡
         </div>
       </div>
-      <div class="zoom-hint" id="zoomHint">滚轮缩放 · 拖拽平移 · 点击节点展开</div>
+      <div class="zoom-hint" id="zoomHint">滚轮缩放 · 拖拽平移 · 点击节点查看详情</div>
     </div>
     <div class="detail-panel" id="detailPanel">
       <button class="toggle-panel-btn" onclick="togglePanel()">◀</button>
@@ -135,7 +135,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC"
         <div class="subtitle" id="panelSubtitle">点击图中节点查看详情</div>
       </div>
       <div class="panel-body" id="panelBody">
-        <div class="empty">点击任意节点查看详细信息<br>点击政策节点展开下一层</div>
+        <div class="empty">点击任意节点查看详细信息</div>
       </div>
     </div>
   </div>
@@ -161,8 +161,8 @@ d3.json("graph_data.json").then(data => {
   data.nodes.filter(n => n.type === "school" && n.province).forEach(n => provinces.add(n.province));
   const sel = document.getElementById("provinceFilter");
   [...provinces].sort().forEach(p => { const o = document.createElement("option"); o.value = p; o.textContent = p; sel.appendChild(o); });
-  // Init: show layer 1 (policies)
-  showLayer1();
+  // Init: show all nodes
+  showAllNodes();
   // Show zoom hint briefly
   const hint = document.getElementById("zoomHint");
   hint.style.opacity = 1;
@@ -207,12 +207,36 @@ function getDescendants(id) {
 }
 
 // ====== VISIBILITY ======
+function showAllNodes() {
+  visible.nodeIds.clear();
+  visible.linkIds.clear();
+  expandedNodes.clear();
+  graphData.nodes.forEach(n => visible.nodeIds.add(n.id));
+  graphData.links.forEach(l => {
+    const sid = l.source.id || l.source;
+    const tid = l.target.id || l.target;
+    visible.linkIds.add(l.id || (sid + "->" + tid));
+  });
+  render();
+}
+
 function showLayer1() {
   visible.nodeIds.clear();
   visible.linkIds.clear();
   expandedNodes.clear();
   graphData.nodes.filter(n => n.layer === 1).forEach(n => visible.nodeIds.add(n.id));
   render();
+}
+
+function selectNode(nodeId) {
+  const node = nodeMap[nodeId];
+  if (!node) return;
+  selectedNodeId = nodeId;
+  showDetail(nodeId);
+  // Update highlight on all nodes
+  nodeGroup.selectAll("circle.node-circle")
+    .attr("stroke", d => selectedNodeId === d.id ? "#60a5fa" : "#fff")
+    .attr("stroke-width", d => selectedNodeId === d.id ? 3 : 1.5);
 }
 
 function toggleExpand(nodeId) {
@@ -299,25 +323,25 @@ function render() {
 
   if (nodes.length === 0) return;
 
-  // Position new nodes
+  // Position new nodes - wider spread for full graph
   nodes.forEach(n => {
     if (n.x === undefined) {
-      n.x = W / 2 + (Math.random() - 0.5) * W * 0.3;
-      n.y = H / 2 + (Math.random() - 0.5) * H * 0.3;
+      n.x = W / 2 + (Math.random() - 0.5) * W * 0.8;
+      n.y = H / 2 + (Math.random() - 0.5) * H * 0.8;
     }
   });
 
-  // Simulation
+  // Simulation - tuned for ~150 nodes
   if (sim) sim.stop();
   sim = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id).distance(d => {
       const s = nodeMap[d.source.id || d.source];
       const t = nodeMap[d.target.id || d.target];
-      return (s ? s.size * 3 : 40) + (t ? t.size * 3 : 40) + 40;
+      return (s ? s.size * 2 : 40) + (t ? t.size * 2 : 40) + 30;
     }))
-    .force("charge", d3.forceManyBody().strength(-300))
+    .force("charge", d3.forceManyBody().strength(-150))
     .force("center", d3.forceCenter(W / 2, H / 2))
-    .force("collide", d3.forceCollide(d => d.size * 2 + 8))
+    .force("collide", d3.forceCollide(d => d.size + 6))
     .alphaDecay(0.02)
     .on("tick", ticked);
 
@@ -349,7 +373,7 @@ function render() {
   nodeEnter.append("circle").attr("class", "node-circle");
   nodeEnter.on("click", (event, d) => {
     event.stopPropagation();
-    toggleExpand(d.id);
+    selectNode(d.id);
   });
 
   // Labels
@@ -452,7 +476,6 @@ function showDetail(nodeId) {
     }
     if (d.source) html += field("来源", d.source);
     html += field("优先级", "★".repeat(Math.round((d.size || 10) / 4)));
-    html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开下层行业</div>`;
   }
 
   if (d.type === "hot" || d.type === "industry") {
@@ -466,7 +489,6 @@ function showDetail(nodeId) {
     if (d.tags && d.tags.length) {
       html += field("适合", d.tags.map(t => `<span class="tag tag-subject">${t}</span>`).join(" "));
     }
-    html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开下层岗位</div>`;
   }
 
   if (d.type === "career") {
@@ -479,14 +501,12 @@ function showDetail(nodeId) {
     if (d.tags && d.tags.length) {
       html += field("适合", d.tags.map(t => `<span class="tag tag-subject">${t}</span>`).join(" "));
     }
-    html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开下层专业</div>`;
   }
 
   if (d.type === "major") {
     html += field("类别", d.category || "理科");
     html += field("学制", d.study_years || "4年");
     if (d.热度) html += field("热度", "●".repeat(Math.min(d.热度, 10)));
-    html += `<div style="margin-top:12px;padding:10px;background:#1a2035;border-radius:4px;font-size:12px;color:#9ca3af;text-align:center;">点击展开开设院校</div>`;
   }
 
   if (d.type === "school") {
@@ -500,11 +520,76 @@ function showDetail(nodeId) {
     html += field("科目要求", d.subject_required || "不限");
   }
 
+  // Connections section: related nodes as clickable tags
+  html += `<div style="margin-top:14px;padding-top:12px;border-top:1px solid #1e2538;">`;
+  html += `<div class="field-label" style="margin-bottom:6px;">关联节点 (点击跳转)</div>`;
+
+  if (d.type === "policy") {
+    const kids = childrenMap[d.id] || [];
+    const related = kids.map(id => nodeMap[id]).filter(Boolean);
+    if (related.length) html += related.map(n => makeNodeTag(n)).join(" ");
+  }
+
+  if (d.type === "hot" || d.type === "industry") {
+    // Parent policy
+    const p = parentMap[d.id];
+    if (p && nodeMap[p.parentId]) html += makeNodeTag(nodeMap[p.parentId]) + " ";
+    // Child careers
+    const kids = childrenMap[d.id] || [];
+    const related = kids.map(id => nodeMap[id]).filter(Boolean);
+    if (related.length) html += related.map(n => makeNodeTag(n)).join(" ");
+  }
+
+  if (d.type === "career") {
+    // Parent industry
+    const p = parentMap[d.id];
+    if (p && nodeMap[p.parentId]) html += makeNodeTag(nodeMap[p.parentId]) + " ";
+    // Child majors
+    const kids = childrenMap[d.id] || [];
+    const related = kids.map(id => nodeMap[id]).filter(Boolean);
+    if (related.length) html += related.map(n => makeNodeTag(n)).join(" ");
+  }
+
+  if (d.type === "major") {
+    // Parent career
+    const p = parentMap[d.id];
+    if (p && nodeMap[p.parentId]) {
+      html += makeNodeTag(nodeMap[p.parentId]) + " ";
+      // Also show grandparent industry
+      const gp = parentMap[p.parentId];
+      if (gp && nodeMap[gp.parentId]) html += makeNodeTag(nodeMap[gp.parentId]) + " ";
+    }
+    // Schools offering this major
+    const schoolNodes = graphData.nodes.filter(n =>
+      n.type === "school" && (n.major_ids || []).includes(d.id)
+    );
+    if (schoolNodes.length) html += schoolNodes.map(n => makeNodeTag(n)).join(" ");
+  }
+
+  if (d.type === "school") {
+    // Majors offered
+    const majorIds = d.major_ids || [];
+    const majors = majorIds.map(id => nodeMap[id]).filter(Boolean);
+    if (majors.length) html += majors.map(n => makeNodeTag(n)).join(" ");
+    // Also show careers (through majors)
+    const careerIds = new Set();
+    majors.forEach(m => {
+      const p = parentMap[m.id];
+      if (p) careerIds.add(p.parentId);
+    });
+    const careers = [...careerIds].map(id => nodeMap[id]).filter(Boolean);
+    if (careers.length) html += careers.map(n => makeNodeTag(n)).join(" ");
+  }
+
+  html += `</div>`;
+
   document.getElementById("panelBody").innerHTML = html;
 }
 
-function field(label, value) {
-  return `<div class="field"><div class="field-label">${label}</div><div class="field-value">${value}</div></div>`;
+function makeNodeTag(n) {
+  const colors = {policy:"#f59e0b", hot:"#f97316", industry:"#a78bfa", career:"#60a5fa", major:"#34d399", school:"#f472b6"};
+  const c = colors[n.type] || "#6b7280";
+  return `<span class="tag" style="background:${c}22;color:${c};border-color:${c}44;cursor:pointer" onclick="selectNode('${n.id}')">${n.name}</span> `;
 }
 
 function getLayerLabel(layer) {
@@ -589,10 +674,10 @@ function resetSearch() {
   document.getElementById("provinceFilter").value = "";
   document.getElementById("scoreFilter").value = "";
   document.getElementById("subjectFilter").value = "";
-  showLayer1();
+  showAllNodes();
   document.getElementById("panelTitle").textContent = "节点详情";
   document.getElementById("panelSubtitle").textContent = "点击图中节点查看详情";
-  document.getElementById("panelBody").innerHTML = `<div class="empty">点击任意节点查看详细信息<br>点击政策节点展开下一层</div>`;
+  document.getElementById("panelBody").innerHTML = `<div class="empty">点击任意节点查看详细信息</div>`;
 }
 
 // ====== PANEL TOGGLE ======

@@ -404,7 +404,7 @@
       "name": "AI算法工程师",
       "layer": 3,
       "type": "career",
-      "size": 13.5,
+      "size": 18,
       "desc": "负责大模型训练调优、CV/NLP算法研发、推荐系统等。最抢手的AI岗位，博士起步、硕士为主。",
       "demand_level": "旺盛",
       "salary_range": "30-150万/年",
@@ -419,7 +419,7 @@
       "name": "AI应用开发工程师",
       "layer": 3,
       "type": "career",
-      "size": 13.5,
+      "size": 18,
       "desc": "基于大模型API开发AI应用，RAG系统搭建，AI Agent开发，模型微调部署。市场需求爆发式增长。",
       "demand_level": "旺盛",
       "salary_range": "20-80万/年",
@@ -435,7 +435,7 @@
       "name": "AI芯片架构师",
       "layer": 3,
       "type": "career",
-      "size": 12.0,
+      "size": 16,
       "desc": "AI芯片设计、NPU架构、存算一体芯片设计。国产AI芯片替代的核心人才。",
       "demand_level": "旺盛",
       "salary_range": "40-200万/年",
@@ -450,7 +450,7 @@
       "name": "芯片设计工程师",
       "layer": 3,
       "type": "career",
-      "size": 13.5,
+      "size": 18,
       "desc": "数字IC设计、模拟IC设计、SoC架构设计。国产芯片设计人才缺口超20万。",
       "demand_level": "旺盛",
       "salary_range": "30-120万/年",
@@ -465,7 +465,7 @@
       "name": "半导体工艺工程师",
       "layer": 3,
       "type": "career",
-      "size": 12.0,
+      "size": 16,
       "desc": "晶圆制造工艺、先进封装、良率提升。国内晶圆厂大规模扩产急需人才。",
       "demand_level": "旺盛",
       "salary_range": "20-80万/年",
@@ -480,7 +480,7 @@
       "name": "半导体设备工程师",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "半导体设备维护、工艺开发、设备国产化替代。国产设备突破需要大量现场工程师。",
       "demand_level": "旺盛",
       "salary_range": "15-60万/年",
@@ -495,7 +495,7 @@
       "name": "光伏/风电工程师",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "光伏电站设计、风电叶片研发、新能源电站运维。新能源装机持续高增带动人才需求。",
       "demand_level": "旺盛",
       "salary_range": "15-50万/年",
@@ -510,7 +510,7 @@
       "name": "电池研发工程师",
       "layer": 3,
       "type": "career",
-      "size": 12.0,
+      "size": 16,
       "desc": "固态电池、钠离子电池、锂电材料研发、BMS系统开发。下一代电池技术突破急需顶尖人才。",
       "demand_level": "旺盛",
       "salary_range": "20-80万/年",
@@ -525,7 +525,7 @@
       "name": "新能源整车工程师",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "三电系统开发、整车集成、智能底盘、车身设计。中国新能源汽车全球领先，出口井喷。",
       "demand_level": "旺盛",
       "salary_range": "15-60万/年",
@@ -540,7 +540,7 @@
       "name": "智能驾驶工程师",
       "layer": 3,
       "type": "career",
-      "size": 13.5,
+      "size": 18,
       "desc": "感知算法、决策规划、高精地图、车载芯片、线控底盘。L3级自动驾驶加速落地。",
       "demand_level": "旺盛",
       "salary_range": "30-120万/年",
@@ -555,7 +555,7 @@
       "name": "创新药研发科学家",
       "layer": 3,
       "type": "career",
-      "size": 9.0,
+      "size": 12,
       "desc": "药物发现、临床前研究、临床试验设计、注册申报。创新药出海浪潮需要国际化人才。",
       "demand_level": "中等",
       "salary_range": "20-100万/年",
@@ -570,7 +570,7 @@
       "name": "基因/细胞治疗研究员",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "CAR-T细胞治疗、基因编辑、mRNA技术。前沿生物技术突破带来新型治疗手段。",
       "demand_level": "旺盛",
       "salary_range": "25-100万/年",
@@ -585,7 +585,7 @@
       "name": "量子算法研究员",
       "layer": 3,
       "type": "career",
-      "size": 15.0,
+      "size": 20,
       "desc": "量子算法设计、量子纠错、量子硬件开发。顶尖科研岗位，全球人才极度稀缺。",
       "demand_level": "极度稀缺",
       "salary_range": "40-200万/年",
@@ -600,7 +600,7 @@
       "name": "卫星/火箭工程师",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "卫星总体设计、火箭推进系统、星载载荷开发、卫星通信。民营航天井喷式发展。",
       "demand_level": "旺盛",
       "salary_range": "20-80万/年",
@@ -615,7 +615,7 @@
       "name": "无人机工程师",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "无人机设计、飞控系统、无人机编队、低空管控系统。低空经济核心人才需求。",
       "demand_level": "旺盛",
       "salary_range": "15-60万/年",
@@ -630,7 +630,7 @@
       "name": "大数据工程师",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "数据仓库、数据管道、实时计算、数据治理。数字化转型核心岗位，需求持续旺盛。",
       "demand_level": "旺盛",
       "salary_range": "20-80万/年",
@@ -646,7 +646,7 @@
       "name": "数据分析师",
       "layer": 3,
       "type": "career",
-      "size": 6.0,
+      "size": 8,
       "desc": "业务数据分析、用户行为分析、数据产品、商业智能BI。入门门槛相对低但竞争激烈。",
       "demand_level": "饱和",
       "salary_range": "10-40万/年",
@@ -663,7 +663,7 @@
       "name": "机器人研发工程师",
       "layer": 3,
       "type": "career",
-      "size": 12.0,
+      "size": 16,
       "desc": "机器人运动控制、SLAM算法、灵巧手设计、人机交互。人形机器人产业化催生新岗位。",
       "demand_level": "旺盛",
       "salary_range": "20-80万/年",
@@ -678,7 +678,7 @@
       "name": "材料研发工程师",
       "layer": 3,
       "type": "career",
-      "size": 7.5,
+      "size": 10,
       "desc": "先进合金、碳纤维、半导体材料、纳米材料研发。基础性岗位需求稳定。",
       "demand_level": "中等",
       "salary_range": "12-50万/年",
@@ -693,7 +693,7 @@
       "name": "机械/电气工程师",
       "layer": 3,
       "type": "career",
-      "size": 7.5,
+      "size": 10,
       "desc": "机械设计、电气自动化、CAE仿真、生产工艺。制造业基础岗位，需求量大但薪资分化。",
       "demand_level": "中等",
       "salary_range": "10-40万/年",
@@ -708,7 +708,7 @@
       "name": "临床医生",
       "layer": 3,
       "type": "career",
-      "size": 9.0,
+      "size": 12,
       "desc": "各类临床医学岗位，三甲医院为就业核心。学历要求高(博士起步)，但职业稳定性极强。",
       "demand_level": "旺盛",
       "salary_range": "15-100万/年",
@@ -723,7 +723,7 @@
       "name": "康养/养老产业管理",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "养老机构运营、康养社区管理、智慧养老产品经理。银发经济蓝海市场。",
       "demand_level": "旺盛",
       "salary_range": "10-40万/年",
@@ -739,7 +739,7 @@
       "name": "环保/碳中和工程师",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "碳资产管理、ESG咨询、环保工程设计、碳排放核算。碳达峰碳中和催生新职业。",
       "demand_level": "旺盛",
       "salary_range": "12-50万/年",
@@ -755,7 +755,7 @@
       "name": "金融科技产品经理",
       "layer": 3,
       "type": "career",
-      "size": 9.0,
+      "size": 12,
       "desc": "数字支付产品、智能投顾、金融风控模型。金融+科技的复合型人才最抢手。",
       "demand_level": "中等",
       "salary_range": "20-80万/年",
@@ -771,7 +771,7 @@
       "name": "量化交易研究员",
       "layer": 3,
       "type": "career",
-      "size": 9.0,
+      "size": 12,
       "desc": "量化策略研发、高频交易、因子挖掘、投资组合优化。数学/物理/计算机背景优先。",
       "demand_level": "中等",
       "salary_range": "30-200万/年",
@@ -786,7 +786,7 @@
       "name": "农业科学家/育种专家",
       "layer": 3,
       "type": "career",
-      "size": 10.5,
+      "size": 14,
       "desc": "生物育种、基因编辑育种、种质资源研究。种业振兴行动急需高端人才。",
       "demand_level": "旺盛",
       "salary_range": "15-60万/年",
@@ -801,7 +801,7 @@
       "name": "文旅策划/运营",
       "layer": 3,
       "type": "career",
-      "size": 7.5,
+      "size": 10,
       "desc": "文旅项目策划、景区运营、文旅IP开发、研学产品设计。文旅融合带来新业态。",
       "demand_level": "中等",
       "salary_range": "8-30万/年",
@@ -817,7 +817,7 @@
       "name": "导演/编剧/制片",
       "layer": 3,
       "type": "career",
-      "size": 4.5,
+      "size": 6,
       "desc": "影视创作、剧本开发、项目制片。头部导演收入极高但淘汰率也极高。",
       "demand_level": "饱和",
       "salary_range": "10-1000万/年",
@@ -833,7 +833,7 @@
       "name": "影视特效/动画师",
       "layer": 3,
       "type": "career",
-      "size": 7.5,
+      "size": 10,
       "desc": "CGI特效、3D动画、虚拟制片、后期制作。国产动画和科幻电影崛起带动需求。",
       "demand_level": "中等",
       "salary_range": "10-50万/年",
@@ -848,7 +848,7 @@
       "name": "短视频/直播运营",
       "layer": 3,
       "type": "career",
-      "size": 4.5,
+      "size": 6,
       "desc": "短视频内容运营、直播电商、MCN管理、出海运营。门槛低但竞争极其激烈。",
       "demand_level": "饱和",
       "salary_range": "8-100万/年",
@@ -864,7 +864,7 @@
       "name": "游戏策划/开发",
       "layer": 3,
       "type": "career",
-      "size": 7.5,
+      "size": 10,
       "desc": "游戏策划、Unity/Unreal开发、游戏出海运营。中国游戏全球市场份额持续提升。",
       "demand_level": "中等",
       "salary_range": "15-80万/年",
@@ -879,7 +879,7 @@
       "name": "体育产业管理",
       "layer": 3,
       "type": "career",
-      "size": 7.5,
+      "size": 10,
       "desc": "体育赛事运营、职业俱乐部管理、体育营销、场馆运营。足球振兴需要专业管理人才。",
       "demand_level": "中等",
       "salary_range": "8-40万/年",
@@ -895,7 +895,7 @@
       "name": "职业教练/体育培训",
       "layer": 3,
       "type": "career",
-      "size": 7.5,
+      "size": 10,
       "desc": "足球教练、体能训练、体育教育、运动康复。三大球振兴计划带动教练人才需求。",
       "demand_level": "中等",
       "salary_range": "8-60万/年",
@@ -910,7 +910,7 @@
       "name": "计算机科学与技术",
       "layer": 4,
       "type": "major",
-      "size": 13.5,
+      "size": 18,
       "desc": "计算机系统结构、软件理论、计算机网络、信息安全等核心课程。AI时代的基石专业。",
       "category": "理科",
       "study_years": "4年",
@@ -921,7 +921,7 @@
       "name": "人工智能",
       "layer": 4,
       "type": "major",
-      "size": 15.0,
+      "size": 20,
       "desc": "机器学习、深度学习、自然语言处理、计算机视觉、强化学习等。最新设立的热门专业。",
       "category": "理科",
       "study_years": "4年",
@@ -932,7 +932,7 @@
       "name": "软件工程",
       "layer": 4,
       "type": "major",
-      "size": 12.0,
+      "size": 16,
       "desc": "软件开发方法、软件测试、项目管理、前端/后端开发。就业口径最宽的IT专业。",
       "category": "理科",
       "study_years": "4年",
@@ -943,7 +943,7 @@
       "name": "数据科学与大数据技术",
       "layer": 4,
       "type": "major",
-      "size": 12.0,
+      "size": 16,
       "desc": "大数据平台、分布式计算、数据挖掘、机器学习。数字经济核心专业。",
       "category": "理科",
       "study_years": "4年",
@@ -954,7 +954,7 @@
       "name": "电子信息工程",
       "layer": 4,
       "type": "major",
-      "size": 12.0,
+      "size": 16,
       "desc": "电路与系统、信号处理、嵌入式系统、通信原理。芯片和通信领域的基石专业。",
       "category": "理科",
       "study_years": "4年",
@@ -965,7 +965,7 @@
       "name": "微电子科学与工程",
       "layer": 4,
       "type": "major",
-      "size": 13.5,
+      "size": 18,
       "desc": "半导体物理、集成电路设计、制造工艺、封装测试。芯片国产化的核心专业。",
       "category": "理科",
       "study_years": "4年",
@@ -976,7 +976,7 @@
       "name": "机械工程",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "机械设计、制造工艺、自动化、机器人技术。制造业根基专业，就业面广。",
       "category": "理科",
       "study_years": "4年",
@@ -987,7 +987,7 @@
       "name": "自动化",
       "layer": 4,
       "type": "major",
-      "size": 10.5,
+      "size": 14,
       "desc": "控制理论、传感器技术、机器人学、工业自动化。智能制造的骨干专业。",
       "category": "理科",
       "study_years": "4年",
@@ -998,7 +998,7 @@
       "name": "机器人工程",
       "layer": 4,
       "type": "major",
-      "size": 12.0,
+      "size": 16,
       "desc": "机器人机构学、运动控制、感知技术、人机交互。新工科热门专业。",
       "category": "理科",
       "study_years": "4年",
@@ -1009,7 +1009,7 @@
       "name": "新能源科学与工程",
       "layer": 4,
       "type": "major",
-      "size": 10.5,
+      "size": 14,
       "desc": "光伏技术、风能技术、储能技术、能源系统集成。新能源产业核心专业。",
       "category": "理科",
       "study_years": "4年",
@@ -1020,7 +1020,7 @@
       "name": "材料科学与工程",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "金属材料、无机非金属、高分子、复合材料。各工业领域的基础支撑专业。",
       "category": "理科",
       "study_years": "4年",
@@ -1031,7 +1031,7 @@
       "name": "化学工程与工艺",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "化学反应工程、分离工程、电化学、新能源材料。锂电池和氢能产业急需。",
       "category": "理科",
       "study_years": "4年",
@@ -1042,7 +1042,7 @@
       "name": "物理学/应用物理",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "理论物理、凝聚态物理、光学、量子信息科学。基础研究的重要学科。",
       "category": "理科",
       "study_years": "4年",
@@ -1053,7 +1053,7 @@
       "name": "数学与应用数学",
       "layer": 4,
       "type": "major",
-      "size": 10.5,
+      "size": 14,
       "desc": "分析、代数、概率统计、运筹优化、计算数学。AI和金融的基石学科。",
       "category": "理科",
       "study_years": "4年",
@@ -1064,7 +1064,7 @@
       "name": "统计学",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "数理统计、数据科学、统计建模、市场调研。数据分析方向的入门专业。",
       "category": "理科",
       "study_years": "4年",
@@ -1075,7 +1075,7 @@
       "name": "临床医学",
       "layer": 4,
       "type": "major",
-      "size": 13.5,
+      "size": 18,
       "desc": "内科学、外科学、妇产科学、儿科学。医学教育的核心专业，学制长但职业稳定。",
       "category": "理科",
       "study_years": "5/8年",
@@ -1086,7 +1086,7 @@
       "name": "药学/制药工程",
       "layer": 4,
       "type": "major",
-      "size": 10.5,
+      "size": 14,
       "desc": "药物化学、药剂学、药理学、药物分析。创新药产业链的核心专业。",
       "category": "理科",
       "study_years": "4/5年",
@@ -1097,7 +1097,7 @@
       "name": "生物科学/生物技术",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "分子生物学、基因工程、细胞生物学、生物信息学。生命科学的前沿学科。",
       "category": "理科",
       "study_years": "4年",
@@ -1108,7 +1108,7 @@
       "name": "航空航天工程",
       "layer": 4,
       "type": "major",
-      "size": 10.5,
+      "size": 14,
       "desc": "飞行器设计、推进理论与工程、导航制导与控制。商业航天核心专业。",
       "category": "理科",
       "study_years": "4年",
@@ -1119,7 +1119,7 @@
       "name": "地理信息科学(GIS)",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "遥感技术、地理信息系统、卫星导航定位。低空经济和智慧城市的基础专业。",
       "category": "理科",
       "study_years": "4年",
@@ -1130,7 +1130,7 @@
       "name": "环境科学与工程",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "环境工程、环境科学、资源循环科学与工程。碳中和领域的核心专业。",
       "category": "理科",
       "study_years": "4年",
@@ -1141,7 +1141,7 @@
       "name": "金融学",
       "layer": 4,
       "type": "major",
-      "size": 12.0,
+      "size": 16,
       "desc": "金融理论、投资学、金融工程、风险管理。传统热门文科专业。",
       "category": "文理兼收",
       "study_years": "4年",
@@ -1152,7 +1152,7 @@
       "name": "经济学",
       "layer": 4,
       "type": "major",
-      "size": 10.5,
+      "size": 14,
       "desc": "宏观经济学、微观经济学、计量经济学、产业经济学。经济分析的基础专业。",
       "category": "文理兼收",
       "study_years": "4年",
@@ -1163,7 +1163,7 @@
       "name": "农学/种子科学与工程",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "作物遗传育种、种子科学、植物保护、智慧农业。种业振兴的核心专业。",
       "category": "理科",
       "study_years": "4年",
@@ -1174,7 +1174,7 @@
       "name": "中国语言文学",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "汉语言文学、古典文献学、创意写作。文化创意产业的根基学科。",
       "category": "文科",
       "study_years": "4年",
@@ -1185,7 +1185,7 @@
       "name": "新闻传播学",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "新闻学、传播学、网络与新媒体、广告学。内容产业的核心专业。",
       "category": "文科",
       "study_years": "4年",
@@ -1196,7 +1196,7 @@
       "name": "广播电视编导/影视制作",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "影视编导、摄影、剪辑、编剧。影视产业的创作类专业。",
       "category": "文理兼收",
       "study_years": "4年",
@@ -1207,7 +1207,7 @@
       "name": "动画/数字媒体艺术",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "动画设计、数字媒体技术、交互设计、游戏设计。数字内容产业的核心创意专业。",
       "category": "文理兼收",
       "study_years": "4年",
@@ -1218,7 +1218,7 @@
       "name": "文化产业管理",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "文化资源管理、文化市场营销、文化政策、国际文化贸易。文化出海的专业管理人才。",
       "category": "文理兼收",
       "study_years": "4年",
@@ -1229,7 +1229,7 @@
       "name": "体育学/体育教育",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "体育教育、运动训练、体育管理、运动人体科学。体育产业发展的专业支撑。",
       "category": "文理兼收",
       "study_years": "4年",
@@ -1240,7 +1240,7 @@
       "name": "健康服务与管理",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "健康管理、养老服务管理、康复治疗。银发经济急需的复合型人才。",
       "category": "文理兼收",
       "study_years": "4年",
@@ -1251,7 +1251,7 @@
       "name": "心理学",
       "layer": 4,
       "type": "major",
-      "size": 9.0,
+      "size": 12,
       "desc": "基础心理学、应用心理学、临床心理学、认知神经科学。AI时代人机交互的重要支撑。",
       "category": "文理兼收",
       "study_years": "4年",
@@ -1262,7 +1262,7 @@
       "name": "考古学/文物与博物馆学",
       "layer": 4,
       "type": "major",
-      "size": 4.5,
+      "size": 6,
       "desc": "考古学、文物保护技术、博物馆学。文化自信下的特色专业。",
       "category": "文科",
       "study_years": "4年",
@@ -1273,7 +1273,7 @@
       "name": "国际关系/外交学",
       "layer": 4,
       "type": "major",
-      "size": 7.5,
+      "size": 10,
       "desc": "国际政治、外交学、跨文化传播、国际组织。文化走出去需要国际化人才。",
       "category": "文科",
       "study_years": "4年",
@@ -1292,7 +1292,7 @@
         "maj_finance",
         "maj_psychology"
       ],
-      "size": 6,
+      "size": 18,
       "tier": "清北",
       "province": "北京",
       "score_low": 660,
@@ -1311,7 +1311,7 @@
         "maj_cs",
         "maj_ai"
       ],
-      "size": 6,
+      "size": 18,
       "tier": "清北",
       "province": "北京",
       "score_low": 688,
@@ -1330,7 +1330,7 @@
         "maj_cs",
         "maj_clinical"
       ],
-      "size": 5,
+      "size": 15,
       "tier": "华五",
       "province": "上海",
       "score_low": 668,
@@ -1349,7 +1349,7 @@
         "maj_cs",
         "maj_clinical"
       ],
-      "size": 5,
+      "size": 15,
       "tier": "华五",
       "province": "上海",
       "score_low": 670,
@@ -1367,7 +1367,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 5,
+      "size": 15,
       "tier": "华五",
       "province": "浙江",
       "score_low": 668,
@@ -1385,7 +1385,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 5,
+      "size": 15,
       "tier": "华五",
       "province": "江苏",
       "score_low": 665,
@@ -1405,7 +1405,7 @@
         "maj_microelec",
         "maj_clinical"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "湖北",
       "score_low": 635,
@@ -1424,7 +1424,7 @@
         "maj_cs",
         "maj_aero"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "北京",
       "score_low": 648,
@@ -1442,7 +1442,7 @@
       "major_ids": [
         "maj_ee"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "北京",
       "score_low": 635,
@@ -1461,7 +1461,7 @@
         "maj_mech",
         "maj_chem_eng"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "天津",
       "score_low": 625,
@@ -1480,7 +1480,7 @@
         "maj_ee",
         "maj_energy"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "广东",
       "score_low": 618,
@@ -1499,7 +1499,7 @@
         "maj_cs",
         "maj_pharmacy"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "江苏",
       "score_low": 575,
@@ -1518,7 +1518,7 @@
         "maj_cs",
         "maj_mech"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "浙江",
       "score_low": 560,
@@ -1537,7 +1537,7 @@
         "maj_cs",
         "maj_ee"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "浙江",
       "score_low": 575,
@@ -1555,7 +1555,7 @@
       "major_ids": [
         "maj_automation"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "江苏",
       "score_low": 590,
@@ -1573,7 +1573,7 @@
       "major_ids": [
         "maj_chem_eng"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "上海",
       "score_low": 585,
@@ -1591,7 +1591,7 @@
       "major_ids": [
         "maj_materials"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "上海",
       "score_low": 580,
@@ -1609,7 +1609,7 @@
       "major_ids": [
         "maj_materials"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "湖北",
       "score_low": 575,
@@ -1627,7 +1627,7 @@
       "major_ids": [
         "maj_mech"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "重庆",
       "score_low": 620,
@@ -1646,7 +1646,7 @@
         "maj_cs",
         "maj_ee"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "陕西",
       "score_low": 595,
@@ -1665,7 +1665,7 @@
         "maj_cs",
         "maj_ee"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "北京",
       "score_low": 605,
@@ -1684,7 +1684,7 @@
         "maj_journalism",
         "maj_film"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "北京",
       "score_low": 580,
@@ -1702,7 +1702,7 @@
       "major_ids": [
         "maj_intl_relations"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "北京",
       "score_low": 595,
@@ -1721,7 +1721,7 @@
         "maj_journalism",
         "maj_finance"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "北京",
       "score_low": 645,
@@ -1739,7 +1739,7 @@
       "major_ids": [
         "maj_finance"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "上海",
       "score_low": 620,
@@ -1757,7 +1757,7 @@
       "major_ids": [
         "maj_finance"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "北京",
       "score_low": 615,
@@ -1775,7 +1775,7 @@
       "major_ids": [
         "maj_clinical"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "广东",
       "score_low": 640,
@@ -1793,7 +1793,7 @@
       "major_ids": [
         "maj_clinical"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "四川",
       "score_low": 625,
@@ -1811,7 +1811,7 @@
       "major_ids": [
         "maj_pharmacy"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "江苏",
       "score_low": 570,
@@ -1829,7 +1829,7 @@
       "major_ids": [
         "maj_clinical"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "广东",
       "score_low": 575,
@@ -1847,7 +1847,7 @@
       "major_ids": [
         "maj_mech"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "浙江",
       "score_low": 560,
@@ -1865,7 +1865,7 @@
       "major_ids": [
         "maj_math"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "天津",
       "score_low": 640,
@@ -1883,7 +1883,7 @@
       "major_ids": [
         "maj_energy"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "上海",
       "score_low": 550,
@@ -1901,7 +1901,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 1,
+      "size": 6,
       "tier": "二本",
       "province": "重庆",
       "score_low": 510,
@@ -1919,7 +1919,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "广东",
       "score_low": 555,
@@ -1937,7 +1937,7 @@
       "major_ids": [
         "maj_cultural_mgt"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "北京",
       "score_low": 550,
@@ -1956,7 +1956,7 @@
         "maj_cultural_mgt",
         "maj_psychology"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "上海",
       "score_low": 540,
@@ -1974,7 +1974,7 @@
       "major_ids": [
         "maj_sports"
       ],
-      "size": 1,
+      "size": 6,
       "tier": "二本",
       "province": "四川",
       "score_low": 480,
@@ -1992,7 +1992,7 @@
       "major_ids": [
         "maj_sports"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "北京",
       "score_low": 560,
@@ -2010,7 +2010,7 @@
       "major_ids": [
         "maj_aero"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "江苏",
       "score_low": 595,
@@ -2029,7 +2029,7 @@
         "maj_cs",
         "maj_physics"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "广东",
       "score_low": 605,
@@ -2047,7 +2047,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "上海",
       "score_low": 645,
@@ -2065,7 +2065,7 @@
       "major_ids": [
         "maj_ee"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "江苏",
       "score_low": 635,
@@ -2083,7 +2083,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "湖北",
       "score_low": 645,
@@ -2101,7 +2101,7 @@
       "major_ids": [
         "maj_finance"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "福建",
       "score_low": 635,
@@ -2119,7 +2119,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "吉林",
       "score_low": 615,
@@ -2138,7 +2138,7 @@
         "maj_cs",
         "maj_robot"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "黑龙江",
       "score_low": 638,
@@ -2156,7 +2156,7 @@
       "major_ids": [
         "maj_aero"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "陕西",
       "score_low": 625,
@@ -2174,7 +2174,7 @@
       "major_ids": [
         "maj_agri"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "甘肃",
       "score_low": 595,
@@ -2192,7 +2192,7 @@
       "major_ids": [
         "maj_automation"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "黑龙江",
       "score_low": 570,
@@ -2210,7 +2210,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "江西",
       "score_low": 565,
@@ -2228,7 +2228,7 @@
       "major_ids": [
         "maj_chinese"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "湖南",
       "score_low": 560,
@@ -2246,7 +2246,7 @@
       "major_ids": [
         "maj_elderly"
       ],
-      "size": 1,
+      "size": 6,
       "tier": "二本",
       "province": "浙江",
       "score_low": 490,
@@ -2264,7 +2264,7 @@
       "major_ids": [
         "maj_economics"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "北京",
       "score_low": 565,
@@ -2282,7 +2282,7 @@
       "major_ids": [
         "maj_economics"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "云南",
       "score_low": 560,
@@ -2300,7 +2300,7 @@
       "major_ids": [
         "maj_psychology"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "湖北",
       "score_low": 570,
@@ -2318,7 +2318,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "北京",
       "score_low": 605,
@@ -2336,7 +2336,7 @@
       "major_ids": [
         "maj_mech"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "四川",
       "score_low": 575,
@@ -2354,7 +2354,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "福建",
       "score_low": 565,
@@ -2372,7 +2372,7 @@
       "major_ids": [
         "maj_cs"
       ],
-      "size": 3,
+      "size": 10,
       "tier": "211",
       "province": "贵州",
       "score_low": 540,
@@ -2390,7 +2390,7 @@
       "major_ids": [
         "maj_agri"
       ],
-      "size": 1,
+      "size": 6,
       "tier": "二本",
       "province": "新疆",
       "score_low": 410,
@@ -2408,7 +2408,7 @@
       "major_ids": [
         "maj_clinical"
       ],
-      "size": 2,
+      "size": 8,
       "tier": "一本",
       "province": "山东",
       "score_low": 555,
@@ -2426,7 +2426,7 @@
       "major_ids": [
         "maj_psychology"
       ],
-      "size": 4,
+      "size": 12,
       "tier": "985",
       "province": "北京",
       "score_low": 640,
